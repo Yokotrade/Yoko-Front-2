@@ -1,14 +1,9 @@
-import React from "react";
-import * as Styled from './App.styled';
+import { useRouting } from 'hooks'
 
 const App = (): JSX.Element => {
-  return (
-    <div>
-      <Styled.TestH>
-        Test deploy
-      </Styled.TestH>
-    </div>
-  );
+  const Routing = useRouting()
+
+  return <>{Routing}</>
 };
 
 export default App;
