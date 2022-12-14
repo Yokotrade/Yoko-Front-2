@@ -5,7 +5,11 @@
       "pages/*": ["./src/pages/*"],
       "constants/*": ["./src/constants/*"],
       "hooks": ["./src/hooks/index"],
-      "api/*": ["./src/api/*"]
+      "api/*": ["./src/api/*"],
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "ui/*": ["./src/ui/*"],
+      "icon/*": ["./src/icon/*"]
     },
     "typeRoots": ["node_modules/@types", "src/types"],
     "outDir": "./dist",
