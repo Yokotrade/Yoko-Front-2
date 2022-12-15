@@ -58,6 +58,13 @@ const config = {
     extensions: [".tsx", ".ts", ".jsx", ".js", "..."],
     alias: {
       pages: path.resolve(__dirname, "src/pages/"),
+      constants: path.resolve(__dirname, "src/constants/"),
+      hooks: path.resolve(__dirname, "src/hooks/index"),
+      api: path.resolve(__dirname, "src/api/"),
+      assets: path.resolve(__dirname, "src/assets/"),
+      components: path.resolve(__dirname, "src/components/"),
+      ui: path.resolve(__dirname, "src/ui/"),
+      icon: path.resolve(__dirname, "src/icon/"),
     },
   },
 };

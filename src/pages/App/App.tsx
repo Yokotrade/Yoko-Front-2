@@ -1,13 +1,13 @@
-import React from "react";
-import * as Styled from './App.styled';
+import Header from "components/Header";
+import { useRouting } from "hooks";
 
 const App = (): JSX.Element => {
+  const Routing = useRouting();
   return (
-    <div>
-      <Styled.TestH>
-        Test deploy
-      </Styled.TestH>
-    </div>
+    <>
+      <Header />
+      {Routing}
+    </>
   );
 };
 
