@@ -2,12 +2,16 @@ import * as Styled from "./InputField.styled";
 
 interface InputFieldProps {
   placeholder: string;
+  handleChange: (evt: React.ChangeEvent<any>) => void;
+  name: string;
 }
 
-
-const InputField = (props: InputFieldProps) => {
+const InputField = ({ placeholder, handleChange, name }: InputFieldProps) => {
   return (
-      <Styled.InputField {...props} />
+    <Styled.InputField
+      onChange={(evt) => handleChange(evt)}
+      {...{ placeholder, name }}
+    />
   );
 };
 
