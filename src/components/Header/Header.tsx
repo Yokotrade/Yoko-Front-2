@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
+import AutnModal from 'components/AuthModal'
 import LogoIcon from "icon/Logo";
 import UserIcon from "icon/User";
 import VKIcon from "icon/social/VK";
@@ -11,8 +12,13 @@ import { languages } from "constants/languages";
 import * as Styled from "./Header.styled";
 
 const Header = (): JSX.Element => {
+  const [openAuthModal, setOpenAuthModal] = useState(false);
+
+  const handleOpenAuthModal = () => setOpenAuthModal(prev => !prev)
+
   return (
     <Styled.HeaderWrapper>
+      <AutnModal open={openAuthModal} onClose={handleOpenAuthModal} />
       <LogoIcon />
       <Styled.ActionWrapper direction="row" spacing={8}>
         <Button disabled size="small">
@@ -37,7 +43,7 @@ const Header = (): JSX.Element => {
         <VKIcon />
         <InstagramIcon />
       </Styled.SocialWrapper>
-      <Styled.UserRegistrationBtn startIcon={<UserIcon />}>
+      <Styled.UserRegistrationBtn startIcon={<UserIcon />} onClick={handleOpenAuthModal}>
         Вход / Регистрация
       </Styled.UserRegistrationBtn>
       <Styled.LanguagesWrapper
