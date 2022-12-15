@@ -70,7 +70,12 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "*": "npm run eslint:fix"
+    "*.(ts|tsx)": "npm run eslint:fix && npx prettier --write ."
   }
 }
