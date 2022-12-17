@@ -6,5 +6,5 @@ import { getToken } from "helpers/withToken";
 export const getUser = () => {
   if (withMock) return withMockReturnValue<User>(MockUser);
   const token = getToken();
-  return axios.get<User>(`users/${token}`);
+  return axios.get<null, User>(`users/${token}`);
 };
