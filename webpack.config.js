@@ -1,5 +1,5 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-const Dotenv = require('dotenv-webpack')
+const Dotenv = require("dotenv-webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -23,7 +23,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: "public/index.html",
     }),
-    new Dotenv()
+    new Dotenv(),
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],

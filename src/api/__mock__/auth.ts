@@ -32,6 +32,6 @@ export const RegisterMockIsCompleted = {
 };
 
 export type AuthUserDto = {
-    email: string;
-    password: string;
-}
+  email: string;
+  password: string;
+};
