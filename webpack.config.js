@@ -66,6 +66,7 @@ const config = {
       ui: path.resolve(__dirname, "src/ui/"),
       icon: path.resolve(__dirname, "src/icon/"),
       helpers: path.resolve(__dirname, "src/helpers/"),
+      store: path.resolve(__dirname, "src/store/"),
     },
   },
 };
