@@ -1,20 +1,29 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AutnModal from 'components/AuthModal'
+import AutnModal from "components/AuthModal";
 import LogoIcon from "icon/Logo";
 import UserIcon from "icon/User";
 import VKIcon from "icon/social/VK";
 import InstagramIcon from "icon/social/Instagram";
 import TelegramIcon from "icon/social/Telegram";
 import TwitterIcon from "icon/social/Twitter";
+import { getSelectedLanguage } from 'helpers/getSelectedLanguage'
 import { languages } from "constants/languages";
 import * as Styled from "./Header.styled";
 
 const Header = (): JSX.Element => {
+  const {t, i18n } = useTranslation()
+
   const [openAuthModal, setOpenAuthModal] = useState(false);
 
-  const handleOpenAuthModal = () => setOpenAuthModal(prev => !prev)
+  const handleOpenAuthModal = () => setOpenAuthModal((prev) => !prev);
+
+  
+  const handleChangeLanguage = (language: string) => {
+    i18n.changeLanguage(language)
+  }
 
   return (
     <Styled.HeaderWrapper>
@@ -22,19 +31,19 @@ const Header = (): JSX.Element => {
       <LogoIcon />
       <Styled.ActionWrapper direction="row" spacing={8}>
         <Button disabled size="small">
-          Прибыль
+          {t("header.profit")}
         </Button>
         <Button disabled size="small">
-          Робот
+        {t("header.robot")}
         </Button>
         <Button disabled size="small">
-          Реферальная программа
+        {t("header.referral_program")}
         </Button>
         <Button disabled size="small">
-          Вопросы
+        {t("header.questions")}
         </Button>
         <Button disabled size="small">
-          О нас
+        {t("header.about")}
         </Button>
       </Styled.ActionWrapper>
       <Styled.SocialWrapper direction="row" spacing={2}>
@@ -43,14 +52,18 @@ const Header = (): JSX.Element => {
         <VKIcon />
         <InstagramIcon />
       </Styled.SocialWrapper>
-      <Styled.UserRegistrationBtn startIcon={<UserIcon />} onClick={handleOpenAuthModal}>
-        Вход / Регистрация
+      <Styled.UserRegistrationBtn
+        startIcon={<UserIcon />}
+        onClick={handleOpenAuthModal}
+      >
+        {t("header.register")}
       </Styled.UserRegistrationBtn>
       <Styled.LanguagesWrapper
         select
-        defaultValue="RU"
+        defaultValue={getSelectedLanguage()}
         variant="standard"
         size="small"
+        onChange={(evt) => handleChangeLanguage(evt.target.value)}
       >
         {languages.map(({ label, Icon }) => (
           <MenuItem sx={{ display: "flex" }} key={label} value={label}>

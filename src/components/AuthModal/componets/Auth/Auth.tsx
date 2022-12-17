@@ -1,22 +1,26 @@
-import { Formik, Form } from "formik";
+import { Formik } from "formik";
+import { useTranslation } from 'react-i18next';
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { cyan, blue, deepPurple } from "@mui/material/colors";
 import InputField from "ui/InputField";
 import { AuthComponentProps } from "../../AutnModal.types";
-import { AuthInitialValues, initialValues, validationSchema } from "./Auth.constants";
+import {
+  AuthInitialValues,
+  initialValues,
+  validationSchema,
+} from "./Auth.constants";
 import * as Styled from "./Auth.styled";
 
 const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
-
+  const { t } = useTranslation()
   const handleSubmit = async (values: AuthInitialValues) => {
     console.log(values);
   };
-
   return (
     <Styled.AuthWrapper>
       <Styled.AuthTitle variant="h3" align="center">
-        Авторизация
+        {t("auth.title")}
       </Styled.AuthTitle>
       <Formik onSubmit={handleSubmit} {...{ initialValues, validationSchema }}>
         {(props) => (
@@ -28,11 +32,11 @@ const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
             />
             <InputField
               name="password"
-              placeholder="Пароль"
+              placeholder={t("auth.password_input_placeholder")}
               handleChange={props.handleChange}
             />
             <Button sx={{ color: deepPurple[100] }} variant="text" size="small">
-              Забыли пароль?
+            {t("auth.forgot")}
             </Button>
             <Stack
               sx={{ width: "100%" }}
@@ -49,7 +53,7 @@ const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
                 variant="contained"
                 onClick={() => handleChangeAuthMode("register")}
               >
-                Зарегистрироваться
+                {t("auth.register")}
               </Button>
               <Button
                 sx={{ background: cyan[50], color: blue[700] }}
@@ -59,7 +63,7 @@ const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
                 variant="contained"
                 onClick={() => props.handleSubmit()}
               >
-                Авторизация
+                {t("auth.authorization")}
               </Button>
             </Stack>
           </Stack>

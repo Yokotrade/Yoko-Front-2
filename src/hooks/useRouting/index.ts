@@ -1,1 +1,1 @@
-export * from './useRouting'
+export * from "./useRouting";
