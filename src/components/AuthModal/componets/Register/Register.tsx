@@ -1,4 +1,5 @@
-import { Formik, Form } from "formik";
+import { Formik } from "formik";
+import { useTranslation } from 'react-i18next';
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
@@ -13,6 +14,7 @@ import {
 import * as Styled from "./Register.styled";
 
 const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
+  const { t } = useTranslation()
   const handleSubmit = async (values: RegisterInitialValues) => {
     console.log(values);
   };
@@ -20,7 +22,7 @@ const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
   return (
     <Styled.RegisterWrapper>
       <Styled.RegisterTitle variant="h3" align="center">
-        Регистрация
+      {t("register.title")}
       </Styled.RegisterTitle>
       <Formik onSubmit={handleSubmit} {...{ initialValues, validationSchema }}>
         {(props) => (
@@ -32,16 +34,16 @@ const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
             />
             <InputField
               name="password"
-              placeholder="Пароль"
+              placeholder={t("register.password_input_placeholder")}
               handleChange={props.handleChange}
             />
             <InputField
               name="passwordRetry"
-              placeholder="Повторите пароль"
+              placeholder={t("register.password_retry_input_placeholder")}
               handleChange={props.handleChange}
             />
             <Typography sx={{ color: deepPurple[100] }} variant="subtitle1">
-              Уже есть логин?
+            {t("register.have_login")}
               <Button
                 sx={{ color: deepPurple[50] }}
                 variant="text"
@@ -49,7 +51,7 @@ const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
                 size="small"
                 onClick={() => handleChangeAuthMode("auth")}
               >
-                Авторизоваться
+                {t("register.authorization")}
               </Button>
             </Typography>
             <Button
@@ -60,7 +62,7 @@ const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
               variant="contained"
               onClick={() => props.handleSubmit()}
             >
-              Зарегистрироваться
+              {t("register.register")}
             </Button>
           </Stack>
         )}

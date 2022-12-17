@@ -1,0 +1,25 @@
+{
+    "header": {
+        "register": "Вход / Регистрация",
+        "profit": "Прибыль",
+        "robot": "Робот",
+        "referral_program": "Реферальная программа",
+        "questions": "Вопросы",
+        "about": "О нас"
+    },
+    "auth": {
+        "title": "Авторизация",
+        "forgot": "Забыли пароль?",
+        "register": "Зарегистрироваться",
+        "authorization": "Авторизация",
+        "password_input_placeholder": "пароль"
+    },
+    "register": {
+        "title": "Регистрация",
+        "have_login": "Уже есть логин?",
+        "register": "Зарегистрироваться",
+        "authorization": "Авторизоваться",
+        "password_input_placeholder": "пароль",
+        "password_retry_input_placeholder": "повторите пароль"
+    }
+}

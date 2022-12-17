@@ -7,9 +7,9 @@ interface CountryType {
 }
 
 export const languages: CountryType[] = [
-  { label: "RU", Icon: RUIcon },
+  { label: "ru", Icon: RUIcon },
   {
-    label: "GE",
+    label: "en",
     Icon: RUIcon,
   },
 ];

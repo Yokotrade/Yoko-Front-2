@@ -1,0 +1,25 @@
+{
+    "header": {
+        "register": "Login / Registration",
+        "profit": "Profit",
+        "robot": "Robot",
+        "referral_program": "Referral program",
+        "questions": "Questions",
+        "about": "About us"
+    }, 
+    "auth": {
+        "title": "Authorization",
+        "forgot": "Forgot your password?",
+        "register": "Register",
+        "authorization": "Authorization",
+        "password_input_placeholder": "password"
+    },
+    "register": {
+        "title": "Register",
+        "have_login": "Already have a login?",
+        "register": "Register",
+        "authorization": "Authorization",
+        "password_input_placeholder": "password",
+        "password_retry_input_placeholder": "repeat the password"
+    }
+}
