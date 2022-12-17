@@ -14,4 +14,3 @@ export const InputField = styled.input`
   color: #9298b8;
   box-sizing: border-box;
 `;
-

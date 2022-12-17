@@ -9,7 +9,8 @@
       "assets/*": ["./src/assets/*"],
       "components/*": ["./src/components/*"],
       "ui/*": ["./src/ui/*"],
-      "icon/*": ["./src/icon/*"]
+      "icon/*": ["./src/icon/*"],
+      "helpers/*": ["./src/helpers/*"],
     },
     "typeRoots": ["node_modules/@types", "src/types"],
     "outDir": "./dist",

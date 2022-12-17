@@ -1,1 +1,1 @@
-export { default } from './VK'
+export { default } from "./VK";

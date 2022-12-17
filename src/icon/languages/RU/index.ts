@@ -1,1 +1,1 @@
-export { default } from './RU'
+export { default } from "./RU";

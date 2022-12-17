@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import DialogContent from "@mui/material/DialogContent";
-import * as Styled from './ModalPage.styled';
+import * as Styled from "./ModalPage.styled";
 
 export interface ModalPageProps {
   open: boolean;
