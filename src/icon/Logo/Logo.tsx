@@ -19,4 +19,4 @@ const LogoIcon = () => {
   );
 };
 
-export default LogoIcon
+export default LogoIcon;

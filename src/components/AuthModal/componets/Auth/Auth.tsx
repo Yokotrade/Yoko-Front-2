@@ -1,18 +1,20 @@
-import { Formik, Form } from "formik";
+import { Formik } from "formik";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { cyan, blue, deepPurple } from "@mui/material/colors";
 import InputField from "ui/InputField";
 import { AuthComponentProps } from "../../AutnModal.types";
-import { AuthInitialValues, initialValues, validationSchema } from "./Auth.constants";
+import {
+  AuthInitialValues,
+  initialValues,
+  validationSchema,
+} from "./Auth.constants";
 import * as Styled from "./Auth.styled";
 
 const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
-
   const handleSubmit = async (values: AuthInitialValues) => {
     console.log(values);
   };
-
   return (
     <Styled.AuthWrapper>
       <Styled.AuthTitle variant="h3" align="center">

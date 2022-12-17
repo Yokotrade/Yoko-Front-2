@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = process.env.BASE_URL || "";
+const BASE_URL = "https://yokotrade.ru/API/";
 
 const instance = axios.create({
   baseURL: BASE_URL,

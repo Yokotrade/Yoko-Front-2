@@ -19,5 +19,3 @@ export const AuthTitle = styled(Typography)`
   color: #ffffff;
   width: 100%;
 `;
-
-

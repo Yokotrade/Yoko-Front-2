@@ -5,7 +5,11 @@ import Button from "@mui/material/Button";
 import { deepPurple, cyan, blue } from "@mui/material/colors";
 import InputField from "ui/InputField";
 import { AuthComponentProps } from "../../AutnModal.types";
-import { RegisterInitialValues, initialValues, validationSchema } from "./Register.constants";
+import {
+  RegisterInitialValues,
+  initialValues,
+  validationSchema,
+} from "./Register.constants";
 import * as Styled from "./Register.styled";
 
 const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {

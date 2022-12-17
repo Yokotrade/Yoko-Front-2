@@ -1,5 +1,5 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-
+const Dotenv = require("dotenv-webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -23,7 +23,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: "public/index.html",
     }),
-
+    new Dotenv(),
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
@@ -33,13 +33,13 @@ const config = {
         test: /\.(ts|tsx)$/i,
         exclude: ["/node_modules/"],
         use: {
-          loader: 'ts-loader',
+          loader: "ts-loader",
           options: {
-          compilerOptions: {
-          noEmit: false, // this option will solve the issue
-         },
+            compilerOptions: {
+              noEmit: false, // this option will solve the issue
+            },
+          },
         },
-      },
       },
       {
         test: /\.css$/i,
@@ -65,6 +65,7 @@ const config = {
       components: path.resolve(__dirname, "src/components/"),
       ui: path.resolve(__dirname, "src/ui/"),
       icon: path.resolve(__dirname, "src/icon/"),
+      helpers: path.resolve(__dirname, "src/helpers/"),
     },
   },
 };
