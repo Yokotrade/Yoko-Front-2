@@ -5,6 +5,8 @@ import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 
 export const HeaderWrapper = styled.header`
+  position: relative;
+  z-index: 3;
   background: #ffffff;
   box-shadow: 0px 25px 20px -25px rgba(20, 25, 143, 0.1);
   width: 100%;
@@ -55,6 +57,13 @@ export const LanguagesItem = styled.div`
   line-height: 12px;
   color: #181938;
   padding: 0;
+`;
+
+export const LanguagesIcon = styled.img`
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
 `;
 
 export const LanguagesText = styled.span`

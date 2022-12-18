@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AutnModal from "components/AuthModal";
@@ -9,21 +9,20 @@ import VKIcon from "icon/social/VK";
 import InstagramIcon from "icon/social/Instagram";
 import TelegramIcon from "icon/social/Telegram";
 import TwitterIcon from "icon/social/Twitter";
-import { getSelectedLanguage } from 'helpers/getSelectedLanguage'
+import { getSelectedLanguage } from "helpers/getSelectedLanguage";
 import { languages } from "constants/languages";
 import * as Styled from "./Header.styled";
 
 const Header = (): JSX.Element => {
-  const {t, i18n } = useTranslation()
+  const { t, i18n } = useTranslation();
 
   const [openAuthModal, setOpenAuthModal] = useState(false);
 
   const handleOpenAuthModal = () => setOpenAuthModal((prev) => !prev);
 
-  
   const handleChangeLanguage = (language: string) => {
-    i18n.changeLanguage(language)
-  }
+    i18n.changeLanguage(language);
+  };
 
   return (
     <Styled.HeaderWrapper>
@@ -34,16 +33,16 @@ const Header = (): JSX.Element => {
           {t("header.profit")}
         </Button>
         <Button disabled size="small">
-        {t("header.robot")}
+          {t("header.robot")}
         </Button>
         <Button disabled size="small">
-        {t("header.referral_program")}
+          {t("header.referral_program")}
         </Button>
         <Button disabled size="small">
-        {t("header.questions")}
+          {t("header.questions")}
         </Button>
         <Button disabled size="small">
-        {t("header.about")}
+          {t("header.about")}
         </Button>
       </Styled.ActionWrapper>
       <Styled.SocialWrapper direction="row" spacing={2}>
@@ -65,10 +64,14 @@ const Header = (): JSX.Element => {
         size="small"
         onChange={(evt) => handleChangeLanguage(evt.target.value)}
       >
-        {languages.map(({ label, Icon }) => (
+        {languages.map(({ label, code }) => (
           <MenuItem sx={{ display: "flex" }} key={label} value={label}>
             <Styled.LanguagesItem>
-              <Icon />
+              <Styled.LanguagesIcon
+                src={`https://flagcdn.com/w20/${code}.png`}
+                srcSet={`https://flagcdn.com/w40/${code}.png 2x`}
+                alt="{label}"
+              />
               <Styled.LanguagesText>{label}</Styled.LanguagesText>
             </Styled.LanguagesItem>
           </MenuItem>

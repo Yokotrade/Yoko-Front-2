@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { cyan, blue, deepPurple } from "@mui/material/colors";
@@ -13,7 +13,7 @@ import {
 import * as Styled from "./Auth.styled";
 
 const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const handleSubmit = async (values: AuthInitialValues) => {
     console.log(values);
   };
@@ -36,7 +36,7 @@ const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
               handleChange={props.handleChange}
             />
             <Button sx={{ color: deepPurple[100] }} variant="text" size="small">
-            {t("auth.forgot")}
+              {t("auth.forgot")}
             </Button>
             <Stack
               sx={{ width: "100%" }}
