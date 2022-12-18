@@ -59,6 +59,13 @@ export const LanguagesItem = styled.div`
   padding: 0;
 `;
 
+export const LanguagesIcon = styled.img`
+margin-right: 5px;
+width: 18px;
+height: 18px;
+border-radius: 50%;
+`;
+
 export const LanguagesText = styled.span`
   display: flex;
   align-item: center;
