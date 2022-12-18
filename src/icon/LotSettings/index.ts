@@ -1,1 +1,1 @@
-export { default } from './LotSettings'
+export { default } from "./LotSettings";

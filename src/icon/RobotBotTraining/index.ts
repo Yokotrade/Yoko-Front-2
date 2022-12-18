@@ -1,1 +1,1 @@
-export { default } from './RobotBotTraining'
+export { default } from "./RobotBotTraining";

@@ -1,1 +1,1 @@
-export { default } from './Algoritm'
+export { default } from "./Algoritm";

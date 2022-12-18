@@ -395,7 +395,7 @@ export const AboutNotesCardBlock = styled.div`
   flex-flow: column nowrap;
   width: 446px;
   height: 571px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-sizing: border-box;
 `;
 

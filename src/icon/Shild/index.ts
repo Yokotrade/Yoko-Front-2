@@ -1,1 +1,1 @@
-export { default } from './Shild'
+export { default } from "./Shild";

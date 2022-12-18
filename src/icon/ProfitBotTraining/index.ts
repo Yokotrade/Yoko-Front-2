@@ -1,1 +1,1 @@
-export { default } from './ProfitBotTraining'
+export { default } from "./ProfitBotTraining";

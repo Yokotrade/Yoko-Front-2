@@ -1,1 +1,1 @@
-export { default } from './TelegrammBot' 
+export { default } from "./TelegrammBot";

@@ -1,1 +1,1 @@
-export { default } from './Magnifier'
+export { default } from "./Magnifier";

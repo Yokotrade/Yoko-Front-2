@@ -60,10 +60,10 @@ export const LanguagesItem = styled.div`
 `;
 
 export const LanguagesIcon = styled.img`
-margin-right: 5px;
-width: 18px;
-height: 18px;
-border-radius: 50%;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
 `;
 
 export const LanguagesText = styled.span`

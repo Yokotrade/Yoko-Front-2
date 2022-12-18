@@ -11,4 +11,3 @@ export const languages: CountryType[] = [
     code: "us",
   },
 ];
- 
