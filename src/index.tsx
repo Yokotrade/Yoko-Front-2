@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import App from "pages/App";
 import { store } from "store/store";
-import './i18n';
+import "./i18n";
 import "./index.css";
 
 const container = document.getElementById("root");

@@ -1,15 +1,13 @@
 import React from "react";
-import RUIcon from "icon/languages/RU";
-
 interface CountryType {
   label: string;
-  Icon: React.FC;
+  code: string;
 }
 
 export const languages: CountryType[] = [
-  { label: "ru", Icon: RUIcon },
+  { label: "ru", code: "ru" },
   {
     label: "en",
-    Icon: RUIcon,
+    code: "us",
   },
 ];

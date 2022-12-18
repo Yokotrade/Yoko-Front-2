@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
@@ -14,7 +14,7 @@ import {
 import * as Styled from "./Register.styled";
 
 const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const handleSubmit = async (values: RegisterInitialValues) => {
     console.log(values);
   };
@@ -22,7 +22,7 @@ const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
   return (
     <Styled.RegisterWrapper>
       <Styled.RegisterTitle variant="h3" align="center">
-      {t("register.title")}
+        {t("register.title")}
       </Styled.RegisterTitle>
       <Formik onSubmit={handleSubmit} {...{ initialValues, validationSchema }}>
         {(props) => (
@@ -43,7 +43,7 @@ const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
               handleChange={props.handleChange}
             />
             <Typography sx={{ color: deepPurple[100] }} variant="subtitle1">
-            {t("register.have_login")}
+              {t("register.have_login")}
               <Button
                 sx={{ color: deepPurple[50] }}
                 variant="text"
