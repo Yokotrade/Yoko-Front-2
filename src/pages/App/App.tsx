@@ -3,11 +3,12 @@ import Footer from "components/Footer";
 import { useRouting } from "hooks";
 
 const App = (): JSX.Element => {
-  const isAuth = false;
+  const isAuth = true;
   const Routing = useRouting();
+  console.log(Routing);
   return (
     <>
-      <Header />
+      {!isAuth && <Header />}
       {Routing}
       {!isAuth && <Footer />}
     </>

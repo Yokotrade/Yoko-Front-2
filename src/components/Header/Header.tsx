@@ -13,7 +13,11 @@ import { getSelectedLanguage } from "helpers/getSelectedLanguage";
 import { languages } from "constants/languages";
 import * as Styled from "./Header.styled";
 
-const Header = (): JSX.Element => {
+interface HeaderProps {
+  position?: string;
+}
+
+const Header = ({ position }: HeaderProps): JSX.Element => {
   const { t, i18n } = useTranslation();
 
   const [openAuthModal, setOpenAuthModal] = useState(false);
@@ -25,7 +29,7 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <Styled.HeaderWrapper>
+    <Styled.HeaderWrapper {...{ position }}>
       <AutnModal open={openAuthModal} onClose={handleOpenAuthModal} />
       <LogoIcon />
       <Styled.ActionWrapper direction="row" spacing={8}>

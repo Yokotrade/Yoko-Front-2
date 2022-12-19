@@ -1,11 +1,14 @@
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 
-export const HeaderWrapper = styled.header`
-  position: relative;
+interface HeaderWrapperProps {
+  position?: string;
+}
+
+export const HeaderWrapper = styled.header<HeaderWrapperProps>`
+  position: ${({position}) => position || "relative" };
   z-index: 3;
   background: #ffffff;
   box-shadow: 0px 25px 20px -25px rgba(20, 25, 143, 0.1);
