@@ -46,10 +46,10 @@ const Header = (): JSX.Element => {
         </Button>
       </Styled.ActionWrapper>
       <Styled.SocialWrapper direction="row" spacing={2}>
-        <TwitterIcon />
-        <TelegramIcon />
-        <VKIcon />
-        <InstagramIcon />
+        <TwitterIcon color="#9298B8" />
+        <TelegramIcon color="#9298B8" />
+        <VKIcon color="#9298B8" />
+        <InstagramIcon color="#9298B8" />
       </Styled.SocialWrapper>
       <Styled.UserRegistrationBtn
         startIcon={<UserIcon />}

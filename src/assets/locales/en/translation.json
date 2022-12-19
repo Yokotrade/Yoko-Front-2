@@ -81,5 +81,10 @@
     "follow_our_blog": "Follow our blog",
     "best_cryptocurrency_trading": "The Best Cryptocurrency Trading Bots in 2022",
     "cryptocurrency_changing_market _change_ratings_changes _version_article": "Cryptocurrency is a rapidly changing market, so information about trading bots changes frequently. Prices change, features are added, and ratings change. We've made three major changes to this version of our article:"
+  },
+  "footer": {
+    "terms_of_use": "Terms of use",
+    "privacy_policy": "Privacy Policy",
+    "cookie_policy": "Cookie Policy"
   }
 }
