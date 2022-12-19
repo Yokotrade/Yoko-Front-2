@@ -11,6 +11,7 @@ import InstagramIcon from "icon/social/Instagram";
 import TelegramIcon from "icon/social/Telegram";
 import TwitterIcon from "icon/social/Twitter";
 import { getSelectedLanguage } from "helpers/getSelectedLanguage";
+import { getIconLng } from "./utils/getIconLng";
 import { languages } from "constants/languages";
 import * as Styled from "./Header.styled";
 
@@ -71,11 +72,7 @@ const Header = (): JSX.Element => {
         {languages.map(({ label, code }) => (
           <MenuItem sx={{ display: "flex" }} key={label} value={label}>
             <Styled.LanguagesItem>
-              <Styled.LanguagesIcon
-                src={`https://flagcdn.com/w20/${code}.png`}
-                srcSet={`https://flagcdn.com/w40/${code}.png 2x`}
-                alt="{label}"
-              />
+              {getIconLng(code)}
               <Styled.LanguagesText>{label}</Styled.LanguagesText>
             </Styled.LanguagesItem>
           </MenuItem>

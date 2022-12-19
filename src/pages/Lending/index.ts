@@ -1,1 +1,1 @@
-export { default } from './Lending'
+export { default } from "./Lending";

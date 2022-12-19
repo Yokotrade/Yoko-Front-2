@@ -1125,4 +1125,4 @@ const GeneralLending = (): JSX.Element => {
   );
 };
 
-export default GeneralLending
+export default GeneralLending;

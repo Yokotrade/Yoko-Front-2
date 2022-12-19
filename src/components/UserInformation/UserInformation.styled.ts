@@ -25,10 +25,11 @@ export const IconBlock = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
   background: #a3aed0;
   border-radius: 10px;
+  box-sizing: border-box;
 `;
 
 export const UserUIDBlock = styled.div`

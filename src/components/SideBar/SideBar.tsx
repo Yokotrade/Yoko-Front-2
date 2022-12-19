@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Toolbar from "@mui/material/Toolbar";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
+import { useTranslation } from "react-i18next";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -20,6 +18,7 @@ import {
 import * as Styled from "./SideBar.styled";
 
 const SideBar = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const handleNavigate = (path: string) => navigate(path);
 
@@ -32,7 +31,10 @@ const SideBar = () => {
               <ListItemIcon sx={{ color: "#CFCEF9" }}>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary="Главная" sx={{ color: "#CFCEF9" }} />
+              <ListItemText
+                primary={t("pages.general")}
+                sx={{ color: "#CFCEF9" }}
+              />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
@@ -40,7 +42,10 @@ const SideBar = () => {
               <ListItemIcon sx={{ color: "#CFCEF9" }}>
                 <SignalCellularAltIcon />
               </ListItemIcon>
-              <ListItemText primary="Статистика" sx={{ color: "#CFCEF9" }} />
+              <ListItemText
+                primary={t("pages.statistics")}
+                sx={{ color: "#CFCEF9" }}
+              />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
@@ -49,7 +54,7 @@ const SideBar = () => {
                 <PeopleIcon />
               </ListItemIcon>
               <ListItemText
-                primary="Реферальная программа"
+                primary={t("pages.referral")}
                 sx={{ color: "#CFCEF9" }}
               />
             </ListItemButton>
@@ -59,7 +64,10 @@ const SideBar = () => {
               <ListItemIcon sx={{ color: "#CFCEF9" }}>
                 <PercentIcon />
               </ListItemIcon>
-              <ListItemText primary="Комиссия" sx={{ color: "#CFCEF9" }} />
+              <ListItemText
+                primary={t("pages.commission")}
+                sx={{ color: "#CFCEF9" }}
+              />
             </ListItemButton>
           </ListItem>
         </List>

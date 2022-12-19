@@ -86,5 +86,24 @@
     "terms_of_use": "Terms of use",
     "privacy_policy": "Privacy Policy",
     "cookie_policy": "Cookie Policy"
+  },
+  "pages": {
+    "general": "Home",
+    "statistics": "Statistics",
+    "referral": "Referral program",
+    "commission": "Commission",
+    "commission_info1": "We want you to earn! Use Yoko Bot and pay only if you earn yourself.",
+    "commission_info2": "After every two weeks of trading with our robot, we take 20% of the profit that the robot has made. Your balance in your personal account on the site will become negative, and you will have three days to pay off the profit commission. If the commission is not paid, the robot is disabled."
+  },
+  "cardContent": {
+    "balance": "Balance",
+    "replenish": "Replenish",
+    "account_balance": "Account balance",
+    "withdraw": "Withdraw",
+    "robot_connected": "Robot connected",
+    "connect": "To plug",
+    "tune": "Tune",
+    "disable": "Disable",
+    "trade_balance": "Trade balance"
   }
 }
