@@ -1,2 +1,2 @@
 export { default } from "./Header";
-export * from './Header.styled'
+export * from "./Header.styled";

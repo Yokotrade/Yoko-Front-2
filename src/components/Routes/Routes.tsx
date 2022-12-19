@@ -15,7 +15,7 @@ import {
 } from "constants/path";
 
 const Routing = (): JSX.Element => {
-  const isAuth = false;
+  const isAuth = true;
   return useMemo(() => {
     if (!isAuth) {
       return (

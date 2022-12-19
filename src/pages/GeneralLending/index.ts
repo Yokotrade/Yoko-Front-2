@@ -1,1 +1,1 @@
-export { default } from './GeneralLending'
+export { default } from "./GeneralLending";

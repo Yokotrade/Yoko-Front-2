@@ -1,1 +1,1 @@
-export { default } from './Commission'
+export { default } from "./Commission";

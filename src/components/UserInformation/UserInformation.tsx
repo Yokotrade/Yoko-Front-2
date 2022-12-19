@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
-import IconButton from '@mui/material/IconButton';
-import LogoutIcon from '@mui/icons-material/Logout';
+import IconButton from "@mui/material/IconButton";
+import LogoutIcon from "@mui/icons-material/Logout";
 import UserAvatar from "icon/UserAvatar";
 import * as Styled from "./UserInformation.styled";
 
