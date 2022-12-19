@@ -33,7 +33,7 @@ import notesFix from "assets/main-lending/notesFix.png";
 import aboutDownPath from "assets/main-lending/aboutDown.png";
 import * as Styled from "./Main.styled";
 
-export const MainLending = (): JSX.Element => {
+const MainLending = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
@@ -1124,3 +1124,5 @@ export const MainLending = (): JSX.Element => {
     </Styled.MainLendingWrapper>
   );
 };
+
+export default MainLending
