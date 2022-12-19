@@ -1,4 +1,7 @@
-const TelegramIcon = () => {
+import { IconProps } from "../../IconProps.types";
+
+const TelegramIcon = (props: IconProps) => {
+  const { color } = props;
   return (
     <svg
       width="22"
@@ -9,7 +12,7 @@ const TelegramIcon = () => {
     >
       <path
         d="M13.75 9.66669L10.0833 13.3334L15.5833 18.8334L19.25 4.16669L2.75 10.5834L6.41667 12.4167L8.25 17.9167L11 14.25"
-        stroke="#9298B8"
+        stroke={color}
         stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"

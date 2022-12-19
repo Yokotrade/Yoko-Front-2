@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AutnModal from "components/AuthModal";
+import UserInformation from "components/UserInformation";
 import LogoIcon from "icon/Logo";
 import UserIcon from "icon/User";
 import VKIcon from "icon/social/VK";
@@ -10,12 +11,13 @@ import InstagramIcon from "icon/social/Instagram";
 import TelegramIcon from "icon/social/Telegram";
 import TwitterIcon from "icon/social/Twitter";
 import { getSelectedLanguage } from "helpers/getSelectedLanguage";
+import { getIconLng } from "./utils/getIconLng";
 import { languages } from "constants/languages";
 import * as Styled from "./Header.styled";
 
 const Header = (): JSX.Element => {
   const { t, i18n } = useTranslation();
-
+  const isAuth = true;
   const [openAuthModal, setOpenAuthModal] = useState(false);
 
   const handleOpenAuthModal = () => setOpenAuthModal((prev) => !prev);
@@ -46,17 +48,20 @@ const Header = (): JSX.Element => {
         </Button>
       </Styled.ActionWrapper>
       <Styled.SocialWrapper direction="row" spacing={2}>
-        <TwitterIcon />
-        <TelegramIcon />
-        <VKIcon />
-        <InstagramIcon />
+        <TwitterIcon color="#9298B8" />
+        <TelegramIcon color="#9298B8" />
+        <VKIcon color="#9298B8" />
+        <InstagramIcon color="#9298B8" />
       </Styled.SocialWrapper>
-      <Styled.UserRegistrationBtn
-        startIcon={<UserIcon />}
-        onClick={handleOpenAuthModal}
-      >
-        {t("header.register")}
-      </Styled.UserRegistrationBtn>
+      {!isAuth && (
+        <Styled.UserRegistrationBtn
+          startIcon={<UserIcon />}
+          onClick={handleOpenAuthModal}
+        >
+          {t("header.register")}
+        </Styled.UserRegistrationBtn>
+      )}
+      {isAuth && <UserInformation />}
       <Styled.LanguagesWrapper
         select
         defaultValue={getSelectedLanguage()}
@@ -67,11 +72,7 @@ const Header = (): JSX.Element => {
         {languages.map(({ label, code }) => (
           <MenuItem sx={{ display: "flex" }} key={label} value={label}>
             <Styled.LanguagesItem>
-              <Styled.LanguagesIcon
-                src={`https://flagcdn.com/w20/${code}.png`}
-                srcSet={`https://flagcdn.com/w40/${code}.png 2x`}
-                alt="{label}"
-              />
+              {getIconLng(code)}
               <Styled.LanguagesText>{label}</Styled.LanguagesText>
             </Styled.LanguagesItem>
           </MenuItem>

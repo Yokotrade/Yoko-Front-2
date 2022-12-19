@@ -1,14 +1,7 @@
-import Header from "components/Header";
-import { useRouting } from "hooks";
+import Routes from "components/Routes";
 
 const App = (): JSX.Element => {
-  const Routing = useRouting();
-  return (
-    <>
-      <Header />
-      {Routing}
-    </>
-  );
+  return <Routes />;
 };
 
 export default App;
