@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AutnModal from "components/AuthModal";
+import UserInformation from "components/UserInformation";
 import LogoIcon from "icon/Logo";
 import UserIcon from "icon/User";
 import VKIcon from "icon/social/VK";
@@ -19,7 +20,7 @@ interface HeaderProps {
 
 const Header = ({ position }: HeaderProps): JSX.Element => {
   const { t, i18n } = useTranslation();
-
+  const isAuth = true;
   const [openAuthModal, setOpenAuthModal] = useState(false);
 
   const handleOpenAuthModal = () => setOpenAuthModal((prev) => !prev);
@@ -55,12 +56,15 @@ const Header = ({ position }: HeaderProps): JSX.Element => {
         <VKIcon color="#9298B8" />
         <InstagramIcon color="#9298B8" />
       </Styled.SocialWrapper>
-      <Styled.UserRegistrationBtn
-        startIcon={<UserIcon />}
-        onClick={handleOpenAuthModal}
-      >
-        {t("header.register")}
-      </Styled.UserRegistrationBtn>
+      {!isAuth && (
+        <Styled.UserRegistrationBtn
+          startIcon={<UserIcon />}
+          onClick={handleOpenAuthModal}
+        >
+          {t("header.register")}
+        </Styled.UserRegistrationBtn>
+      )}
+      {isAuth && <UserInformation />}
       <Styled.LanguagesWrapper
         select
         defaultValue={getSelectedLanguage()}
