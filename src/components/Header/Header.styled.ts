@@ -3,12 +3,8 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 
-interface HeaderWrapperProps {
-  position?: string;
-}
-
-export const HeaderWrapper = styled.header<HeaderWrapperProps>`
-  position: ${({position}) => position || "relative" };
+export const HeaderWrapper = styled.header`
+  position: "relative";
   z-index: 3;
   background: #ffffff;
   box-shadow: 0px 25px 20px -25px rgba(20, 25, 143, 0.1);
