@@ -31,9 +31,9 @@ import robotPath from "assets/main-lending/robot.png";
 import userAvatarFix from "assets/main-lending/userAvatarFix.png";
 import notesFix from "assets/main-lending/notesFix.png";
 import aboutDownPath from "assets/main-lending/aboutDown.png";
-import * as Styled from "./Main.styled";
+import * as Styled from "./GeneralLending.styled";
 
-const MainLending = (): JSX.Element => {
+const GeneralLending = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
@@ -1125,4 +1125,4 @@ const MainLending = (): JSX.Element => {
   );
 };
 
-export default MainLending
+export default GeneralLending
