@@ -9,15 +9,12 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import AutnModal from "components/AuthModal";
+import { useAppDispatch } from "store/hook";
+import { activeModal } from "store/Modals";
 import UserInformation from "components/UserInformation";
 import SocialIconBlock from "components/SocialIconBlock";
 import LogoIcon from "icon/Logo";
 import UserIcon from "icon/User";
-import VKIcon from "icon/social/VK";
-import InstagramIcon from "icon/social/Instagram";
-import TelegramIcon from "icon/social/Telegram";
-import TwitterIcon from "icon/social/Twitter";
 import { getSelectedLanguage } from "helpers/getSelectedLanguage";
 import { getIconLng } from "./utils/getIconLng";
 import { languages } from "constants/languages";
@@ -26,13 +23,17 @@ import * as Styled from "./Header.styled";
 
 const Header = (): JSX.Element => {
   const { t, i18n } = useTranslation();
+  const dispatch = useAppDispatch();
   const isAuth = false;
-  const [openAuthModal, setOpenAuthModal] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const handleOpenMenu = () => {
     setOpenMenu((prev) => !prev);
   };
-  const handleOpenAuthModal = () => setOpenAuthModal((prev) => !prev);
+  // const handleOpenAuthModal = () => setOpenAuthModal((prev) => !prev);
+
+  const handleOpenAuthModal = () => {
+    dispatch(activeModal("auth"));
+  };
 
   const handleChangeLanguage = (language: string) => {
     i18n.changeLanguage(language);
@@ -40,7 +41,6 @@ const Header = (): JSX.Element => {
 
   return (
     <Styled.HeaderWrapper>
-      <AutnModal open={openAuthModal} onClose={handleOpenAuthModal} />
       <Styled.LeftBlock direction="row" spacing={8}>
         <LogoIcon />
         {!isAuth && (

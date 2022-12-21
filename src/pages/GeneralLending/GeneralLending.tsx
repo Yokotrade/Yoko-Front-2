@@ -8,6 +8,8 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CachedIcon from "@mui/icons-material/Cached";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import { useAppDispatch } from "store/hook";
+import { activeModal } from "store/Modals";
 import MagnifierIcon from "icon/Magnifier";
 import StatisticIcon from "icon/Statistic";
 import BotIcon from "icon/Bot";
@@ -36,7 +38,10 @@ import * as Styled from "./GeneralLending.styled";
 
 const GeneralLending = (): JSX.Element => {
   const { t } = useTranslation();
-
+  const dispatch = useAppDispatch();
+  const handleOpenAuthModal = () => {
+    dispatch(activeModal("auth"));
+  };
   return (
     <Styled.MainLendingWrapper>
       <Styled.RobotBackgroundImageBlock
@@ -55,6 +60,7 @@ const GeneralLending = (): JSX.Element => {
             startIcon={<RocketLaunchIcon />}
             variant="contained"
             size="large"
+            onClick={() => handleOpenAuthModal()}
           >
             {t("dictionary.start_trial")}
           </Button>
@@ -120,7 +126,12 @@ const GeneralLending = (): JSX.Element => {
             </Styled.PassiveIncomeCardDescription>
           </Styled.PassiveIncomeCard>
         </Styled.PassiveIncomeCardsWrapper>
-        <Button startIcon={<AttachMoneyIcon />} variant="contained">
+        <Button
+          sx={{ zIndex: 100 }}
+          startIcon={<AttachMoneyIcon />}
+          variant="contained"
+          onClick={() => handleOpenAuthModal()}
+        >
           {t("dictionary.create_passive_income")}
         </Button>
       </Styled.PassiveIncomeWrapper>
@@ -162,7 +173,11 @@ const GeneralLending = (): JSX.Element => {
                 "dictionary.percentage_profit_calculated_size_deposit_trading_period"
               )}
             </Styled.JobsRobotDescriptionSpan>
-            <Button startIcon={<BotIcon />} variant="contained">
+            <Button
+              startIcon={<BotIcon />}
+              variant="contained"
+              onClick={() => handleOpenAuthModal()}
+            >
               {t("dictionary.connect_robot")}
             </Button>
           </Styled.JobsRobotDescriptionBlock>
@@ -538,7 +553,6 @@ const GeneralLending = (): JSX.Element => {
                 <RobotBotTrainingIcon />
               </Styled.IncomeCardIcon>
             </Styled.BotTrainingStepIconBlock>
-
             <Typography
               sx={{
                 margin: "10px 0 20px 0",
@@ -567,9 +581,11 @@ const GeneralLending = (): JSX.Element => {
           </Styled.BotTrainingStepCard>
         </Styled.BotTrainingStepsWrapper>
         <Button
+          sx={{ zIndex: 100 }}
           startIcon={<PersonOutlineIcon />}
           variant="contained"
           size="large"
+          onClick={() => handleOpenAuthModal()}
         >
           {t("dictionary.create_account")}
         </Button>
@@ -679,9 +695,10 @@ const GeneralLending = (): JSX.Element => {
           </Styled.GoalsFutureCard>
         </Styled.GoalsFutureBlock>
         <Button
-          sx={{ marginTop: "55px" }}
+          sx={{ marginTop: "55px", zIndex: 100 }}
           startIcon={<RocketLaunchIcon />}
           variant="contained"
+          onClick={() => handleOpenAuthModal()}
         >
           {t("dictionary.start_trading")}
         </Button>
@@ -707,6 +724,7 @@ const GeneralLending = (): JSX.Element => {
             startIcon={<PeopleAltIcon />}
             variant="contained"
             size="large"
+            onClick={() => handleOpenAuthModal()}
           >
             {t("dictionary.become_referral")}
           </Button>
