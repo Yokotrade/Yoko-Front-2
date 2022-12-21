@@ -1,10 +1,8 @@
 import { useTranslation } from "react-i18next";
 import Typography from "@mui/material/Typography";
+import SocialIconBlock from 'components/SocialIconBlock'
 import LogoWhiteIcon from "icon/LogoWhite";
-import VKIcon from "icon/social/VK";
-import InstagramIcon from "icon/social/Instagram";
-import TelegramIcon from "icon/social/Telegram";
-import TwitterIcon from "icon/social/Twitter";
+
 import * as Styled from "./Footer.styled";
 
 const Footer = () => {
@@ -104,12 +102,7 @@ const Footer = () => {
           {t("header.about")}
         </Typography>
       </Styled.SectionsBlock>
-      <Styled.SocialBlock>
-        <TwitterIcon color="#ffffff" />
-        <TelegramIcon color="#ffffff" />
-        <VKIcon color="#ffffff" />
-        <InstagramIcon color="#ffffff" />
-      </Styled.SocialBlock>
+      <SocialIconBlock color="#ffffff"/>
     </Styled.FooterWrapper>
   );
 };

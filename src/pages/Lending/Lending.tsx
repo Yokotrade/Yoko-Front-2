@@ -1,5 +1,7 @@
-import Header from "components/Header";
 import GeneralLending from "pages/GeneralLending";
+import Header from "components/Header";
+import Footer from "components/Footer"
+
 const Lending = () => {
   window.addEventListener("scroll", () => {
     const pageYOffset = window.pageYOffset;
@@ -18,6 +20,7 @@ const Lending = () => {
     <div>
       <Header />
       <GeneralLending />
+      <Footer />
     </div>
   );
 };

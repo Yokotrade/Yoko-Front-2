@@ -31,6 +31,7 @@ import robotPath from "assets/main-lending/robot.png";
 import userAvatarFix from "assets/main-lending/userAvatarFix.png";
 import notesFix from "assets/main-lending/notesFix.png";
 import aboutDownPath from "assets/main-lending/aboutDown.png";
+import upBlockImagePath from "assets/main-lending/up_block.png";
 import * as Styled from "./GeneralLending.styled";
 
 const GeneralLending = (): JSX.Element => {
@@ -38,201 +39,97 @@ const GeneralLending = (): JSX.Element => {
 
   return (
     <Styled.MainLendingWrapper>
+      <Styled.RobotBackgroundImageBlock src={upBlockImagePath} alt="upBlockImagePath"/>
       <Styled.RobotMainBlock>
         <Styled.RobotInformationBlock>
-          <Typography
-            sx={{
-              fontWeight: "800",
-              fontSize: "70px",
-              lineHeight: "80px",
-            }}
-          >
+          <Styled.RobotTitle>
             {t("dictionary.cryptocurrency_trading_robot")}
-          </Typography>
-          <Typography
-            sx={{
-              fontWeight: "400",
-              fontSize: "28px",
-              lineHeight: "40px",
-              margin: "40px 0 40px 0",
-            }}
-          >
+          </Styled.RobotTitle>
+          <Styled.RobotDescription>
             {t("dictionary.beginners_ordinary_people_professionals_traders")}
-          </Typography>
-          <Button startIcon={<RocketLaunchIcon />} variant="contained">
+          </Styled.RobotDescription>
+          <Button startIcon={<RocketLaunchIcon />} variant="contained" size="large">
             {t("dictionary.start_trial")}
           </Button>
         </Styled.RobotInformationBlock>
         <Styled.RobotImage src={robotPath} alt="upBlockImagePath" />
       </Styled.RobotMainBlock>
       <Styled.PassiveIncomeWrapper>
-        <Typography
-          sx={{
-            fontWeight: "800",
-            fontSize: "54px",
-            lineHeight: "60px",
-          }}
-        >
+        <Styled.PassiveIncomeTitle>
           {t("dictionary.create_passive_income_cryptocurrency")}
-        </Typography>
-        <Typography
-          sx={{
-            margin: "25px 0 55px 0",
-            fontWeight: "400",
-            fontSize: "24px",
-            lineHeight: "36px",
-            color: "#9298B8",
-          }}
-        >
+        </Styled.PassiveIncomeTitle>
+        <Styled.PassiveIncomeDescription>
           {t("dictionary.mind_business_smart_yoko_robot_everything_you")}
-        </Typography>
+        </Styled.PassiveIncomeDescription>
         <Styled.PassiveIncomeCardsWrapper>
           <Styled.PassiveIncomeCard>
             <Styled.IncomeCardIcon>
               <MagnifierIcon />
             </Styled.IncomeCardIcon>
-            <Typography
-              sx={{
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-                margin: "20px 0 10px 0",
-              }}
-            >
+            <Styled.PassiveIncomeCardTitle>
               {t("dictionary.coin_analysis")}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-              }}
-            >
+            </Styled.PassiveIncomeCardTitle>
+            <Styled.PassiveIncomeCardDescription>
               {t(
                 "dictionary.robot_nalyzes_charts_selects_successful_coins_trading"
               )}
-            </Typography>
+            </Styled.PassiveIncomeCardDescription>
           </Styled.PassiveIncomeCard>
           <Styled.PassiveIncomeCard>
             <Styled.IncomeCardIcon>
               <StatisticIcon />
             </Styled.IncomeCardIcon>
-            <Typography
-              sx={{
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-                margin: "20px 0 10px 0",
-              }}
-            >
+            <Styled.PassiveIncomeCardTitle>
               {t("dictionary.buying_selling")}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-              }}
-            >
+            </Styled.PassiveIncomeCardTitle>
+            <Styled.PassiveIncomeCardDescription>
               {t("dictionary.knows_buy_sell_closes_profitable_trades")}
-            </Typography>
+            </Styled.PassiveIncomeCardDescription>
           </Styled.PassiveIncomeCard>
           <Styled.PassiveIncomeCard>
             <Styled.IncomeCardIcon>
               <ClockIcon />
             </Styled.IncomeCardIcon>
-            <Typography
-              sx={{
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-                margin: "20px 0 10px 0",
-              }}
-            >
+            <Styled.PassiveIncomeCardTitle>
               {t("dictionary.works_24_7")}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-              }}
-            >
+            </Styled.PassiveIncomeCardTitle>
+            <Styled.PassiveIncomeCardDescription>
               {t(
                 "dictionary.robot_not_need_sleep_works_monitors_situation_breaks_days_while_rest"
               )}
-            </Typography>
+            </Styled.PassiveIncomeCardDescription>
           </Styled.PassiveIncomeCard>
           <Styled.PassiveIncomeCard>
             <Styled.IncomeCardIcon>
               <ShildIcon />
             </Styled.IncomeCardIcon>
-            <Typography
-              sx={{
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-                margin: "20px 0 10px 0",
-              }}
-            >
+            <Styled.PassiveIncomeCardTitle>
               {t("dictionary.safely")}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-              }}
-            >
+            </Styled.PassiveIncomeCardTitle>
+            <Styled.PassiveIncomeCardDescription>
               {t(
                 "dictionary.your_money_your_money_your_stored_exchange_have_access_them_robot_cannot_deposit_withdraw_money_open_close_trades"
               )}
-            </Typography>
+            </Styled.PassiveIncomeCardDescription>
           </Styled.PassiveIncomeCard>
         </Styled.PassiveIncomeCardsWrapper>
-      </Styled.PassiveIncomeWrapper>
-      <Styled.JobsBlock>
-        <Button
-          sx={{ marginTop: "125px" }}
-          startIcon={<AttachMoneyIcon />}
-          variant="contained"
-        >
+        <Button startIcon={<AttachMoneyIcon />} variant="contained">
           {t("dictionary.create_passive_income")}
         </Button>
+      </Styled.PassiveIncomeWrapper>
+      <Styled.JobsBlock>
         <Styled.JobsBlockImage
           src={waveBackgroundImagePath}
           alt="waveBackgroundImagePath"
         />
         <Styled.JobsInfomationWrapper>
           <Styled.JobsInfomationBlock>
-            <Typography
-              sx={{
-                fontWeight: "800",
-                fontSize: "54px",
-                lineHeight: "60px",
-                color: "#181938",
-              }}
-            >
+            <Styled.JobsTitle>
               {t("dictionary.we_work_largest_exchanges")}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "24px",
-                lineHeight: "36px",
-                color: "#9298B8",
-              }}
-            >
+            </Styled.JobsTitle>
+            <Styled.JobsDescription>
               Binance, Huobi, OKX, ByBit
-            </Typography>
+            </Styled.JobsDescription>
           </Styled.JobsInfomationBlock>
           <Styled.RobotImage
             src={staticTradeImagePath}
@@ -245,74 +142,36 @@ const GeneralLending = (): JSX.Element => {
             alt="yokoTradeImagePath"
           />
           <Styled.JobsRobotDescriptionBlock>
-            <Typography
-              sx={{
-                fontWeight: "800",
-                fontSize: "54px",
-                lineHeight: "60px",
-                color: "#181938",
-              }}
-            >
+            <Styled.JobsRobotDescriptionTitle>
               {t("dictionary.we_want_you_earn")}
-            </Typography>
-            <Typography
-              sx={{
-                margin: "25px 0 25px 0",
-                fontWeight: "400",
-                fontSize: "24px",
-                lineHeight: "36px",
-                color: "#181938",
-              }}
-            >
+            </Styled.JobsRobotDescriptionTitle>
+            <Styled.JobsRobotDescriptionSubTitle>
               {t(
                 "dictionary.we_connect_robot_absolutely_charge._subscription_fees"
               )}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "13px",
-                lineHeight: "20px",
-                color: "#5E658D",
-              }}
-            >
-              *{" "}
+            </Styled.JobsRobotDescriptionSubTitle>
+            <Styled.JobsRobotDescriptionSpan>
               {t(
                 "dictionary.percentage_profit_calculated_size_deposit_trading_period"
               )}
-            </Typography>
-            <Button
-              sx={{ marginTop: "25px" }}
-              startIcon={<BotIcon />}
-              variant="contained"
-            >
+            </Styled.JobsRobotDescriptionSpan>
+            <Button startIcon={<BotIcon />} variant="contained">
               {t("dictionary.connect_robot")}
             </Button>
           </Styled.JobsRobotDescriptionBlock>
         </Styled.JobsRobotWrapper>
       </Styled.JobsBlock>
       <Styled.TransactionsWrapper>
-        <Typography
-          sx={{
-            fontWeight: "800",
-            fontSize: "54px",
-            lineHeight: "60px",
-            color: "#181938",
-          }}
-        >
+        <Styled.TransactionsBlockImage
+          src={waveBackgroundImagePath}
+          alt="waveBackgroundImagePath"
+        />
+        <Styled.TransactionsTitle>
           {t("dictionary.last_closed_deals_Yoko_robot")}
-        </Typography>
-        <Typography
-          sx={{
-            margin: "20px 0 55px 0",
-            fontWeight: "400",
-            fontSize: "24px",
-            lineHeight: "36px",
-            color: "#9298B8",
-          }}
-        >
+        </Styled.TransactionsTitle>
+        <Styled.TransactionsDescription>
           {t("dictionary.keep_track_latest_robot_trades")}
-        </Typography>
+        </Styled.TransactionsDescription>
         <Styled.TransactionsCardsWrapper>
           <Styled.TransactionsCard>
             <Typography
@@ -529,35 +388,14 @@ const GeneralLending = (): JSX.Element => {
         </Button>
       </Styled.TransactionsWrapper>
       <Styled.BotTrainingWrapper>
-        <Typography
-          sx={{
-            fontWeight: "800",
-            fontSize: "54px",
-            lineHeight: "60px",
-            color: "#181938",
-            textAlign: "center",
-          }}
-        >
-          {t("dictionary.cryptocurrencies_hard")}, <br /> {t("dictionary.nose")}{" "}
-          {
-            <Styled.BotTrainingSpan>
-              {t("dictionary.Yoko_botom")}{" "}
-            </Styled.BotTrainingSpan>
-          }{" "}
+        <Styled.BotTrainingTitle>
+          {t("dictionary.cryptocurrencies_hard")}, <br /> {t("dictionary.nose")}
+          <span>{` ${t("dictionary.Yoko_botom")} `}</span>
           {t("dictionary.everything_become_simple_understandable")}
-        </Typography>
-        <Typography
-          sx={{
-            margin: "20px 0 55px 0",
-            fontWeight: "400",
-            fontSize: "24px",
-            lineHeight: "36px",
-            color: "#9298B8",
-            textAlign: "center",
-          }}
-        >
+        </Styled.BotTrainingTitle>
+        <Styled.BotTrainingDescription>
           {t("dictionary.connect_robot_easy_steps")}
-        </Typography>
+        </Styled.BotTrainingDescription>
         <Styled.BotTrainingStepsWrapper>
           <Styled.BotTrainingStepCard>
             <Styled.BotTrainingStepIconBlock>
@@ -722,7 +560,6 @@ const GeneralLending = (): JSX.Element => {
           </Styled.BotTrainingStepCard>
         </Styled.BotTrainingStepsWrapper>
         <Button
-          sx={{ marginTop: "55px" }}
           startIcon={<PersonOutlineIcon />}
           variant="contained"
           size="large"
@@ -731,132 +568,71 @@ const GeneralLending = (): JSX.Element => {
         </Button>
       </Styled.BotTrainingWrapper>
       <Styled.LKInformationWrapper>
-        <Styled.RobotInformationBlock>
-          <Typography
-            sx={{
-              fontWeight: "800",
-              fontSize: "70px",
-              lineHeight: "80px",
-            }}
-          >
+        <Styled.LKInformationWrapperImage
+          src={waveBackgroundImagePath}
+          alt="waveBackgroundImagePath"
+        />
+        <Styled.LKInformationBlock>
+          <Styled.LKInformationTitle>
             {t(
               "dictionary.keep_track_transactions_convenient_personal_account"
             )}
-          </Typography>
-          <Typography
-            sx={{
-              fontWeight: "400",
-              fontSize: "28px",
-              lineHeight: "40px",
-              margin: "25px 0 0 0",
-            }}
-          >
+          </Styled.LKInformationTitle>
+          <Styled.LKInformationDescription>
             {t("dictionary.follow_full_statistics_trading_device_wherever")}
-          </Typography>
-        </Styled.RobotInformationBlock>
-        <Styled.RobotImage src={lkScreen} alt="lkScreen" />
+          </Styled.LKInformationDescription>
+        </Styled.LKInformationBlock>
+        <Styled.LKInformationImage src={lkScreen} alt="lkScreen" />
       </Styled.LKInformationWrapper>
       <Styled.GoalsWrapper>
-        <Typography
-          sx={{
-            fontWeight: "800",
-            fontSize: "54px",
-            lineHeight: "60px",
-            color: "#181938",
-          }}
-        >
+        <Styled.GoalsTitle>
           {t("dictionary.your_goal_profit_will_help_this")}
-        </Typography>
+        </Styled.GoalsTitle>
         <Styled.GoalsRealisedBlock>
           <Styled.GoalsRealisedCard>
-            <Styled.IncomeCardIcon>
+            <Styled.GoalsCardIcon>
               <AlgoritmIcon />
-            </Styled.IncomeCardIcon>
-            <Typography
-              sx={{
-                margin: "15px 0 20px 0",
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-                textAlign: "center",
-              }}
-            >
-              {t("dictionary.smart_trading_algorithm")}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-                textAlign: "center",
-              }}
-            >
-              {t(
-                "dictionary.combined_trading_strategies_trading_combined_together_efficiency_strategy"
-              )}
-            </Typography>
+            </Styled.GoalsCardIcon>
+            <Styled.GoalsInformationCard>
+              <Styled.GoalsInformationCardTitle>
+                {t("dictionary.smart_trading_algorithm")}
+              </Styled.GoalsInformationCardTitle>
+              <Styled.GoalsInformationCardDescription>
+                {t(
+                  "dictionary.combined_trading_strategies_trading_combined_together_efficiency_strategy"
+                )}
+              </Styled.GoalsInformationCardDescription>
+            </Styled.GoalsInformationCard>
           </Styled.GoalsRealisedCard>
           <Styled.GoalsRealisedCard>
-            <Styled.IncomeCardIcon>
+            <Styled.GoalsCardIcon>
               <MoneyIcon />
-            </Styled.IncomeCardIcon>
-            <Typography
-              sx={{
-                margin: "15px 0 20px 0",
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-                textAlign: "center",
-              }}
-            >
-              {t("dictionary.unlimited_list_coins")}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-                textAlign: "center",
-              }}
-            >
-              {t(
-                "dictionary.robot_simultaneously_unlimited_automatically_trading_pairs"
-              )}
-            </Typography>
+            </Styled.GoalsCardIcon>
+            <Styled.GoalsInformationCard>
+              <Styled.GoalsInformationCardTitle>
+                {t("dictionary.unlimited_list_coins")}
+              </Styled.GoalsInformationCardTitle>
+              <Styled.GoalsInformationCardDescription>
+                {t(
+                  "dictionary.robot_simultaneously_unlimited_automatically_trading_pairs"
+                )}
+              </Styled.GoalsInformationCardDescription>
+            </Styled.GoalsInformationCard>
           </Styled.GoalsRealisedCard>
           <Styled.GoalsRealisedCard>
-            <Styled.IncomeCardIcon>
+            <Styled.GoalsCardIcon>
               <LotSettingsIcon />
-            </Styled.IncomeCardIcon>
-            <Typography
-              sx={{
-                margin: "15px 0 20px 0",
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-                textAlign: "center",
-              }}
-            >
-              {t("dictionary.large_selection_settings")}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-                textAlign: "center",
-              }}
-            >
-              {t(
-                "dictionary.capabilities_control_panel_trading_settings_effectively_individually_robot_improve_trading"
-              )}
-            </Typography>
+            </Styled.GoalsCardIcon>
+            <Styled.GoalsInformationCard>
+              <Styled.GoalsInformationCardTitle>
+                {t("dictionary.large_selection_settings")}
+              </Styled.GoalsInformationCardTitle>
+              <Styled.GoalsInformationCardDescription>
+                {t(
+                  "dictionary.capabilities_control_panel_trading_settings_effectively_individually_robot_improve_trading"
+                )}
+              </Styled.GoalsInformationCardDescription>
+            </Styled.GoalsInformationCard>
           </Styled.GoalsRealisedCard>
         </Styled.GoalsRealisedBlock>
         <Styled.GoalsFutureBlock>
@@ -867,29 +643,14 @@ const GeneralLending = (): JSX.Element => {
               </Styled.GoalsCheckFutureSpanBlock>
               <TelegrammBotIcon />
             </Styled.FutureCardIcon>
-            <Typography
-              sx={{
-                margin: "15px 0 20px 0",
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-                textAlign: "center",
-              }}
-            >
-              {t("dictionary.telegram_bot")}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-                textAlign: "center",
-              }}
-            >
-              {t("dictionary.connect_telegram_account_notify_transactions")}
-            </Typography>
+            <Styled.GoalsInformationCard>
+              <Styled.GoalsInformationCardTitle>
+                {t("dictionary.telegram_bot")}
+              </Styled.GoalsInformationCardTitle>
+              <Styled.GoalsInformationCardDescription>
+                {t("dictionary.connect_telegram_account_notify_transactions")}
+              </Styled.GoalsInformationCardDescription>
+            </Styled.GoalsInformationCard>
           </Styled.GoalsFutureCard>
           <Styled.GoalsFutureCard>
             <Styled.FutureCardIcon>
@@ -898,31 +659,16 @@ const GeneralLending = (): JSX.Element => {
               </Styled.GoalsCheckFutureSpanBlock>
               <SimulateIcon />
             </Styled.FutureCardIcon>
-            <Typography
-              sx={{
-                margin: "15px 0 20px 0",
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-                textAlign: "center",
-              }}
-            >
-              {t("dictionary.simulation_mode")}
-            </Typography>
-            <Typography
-              sx={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-                textAlign: "center",
-              }}
-            >
-              {t(
-                "dictionary.personal_account_simulation_mode_deposit_traded_period_yoko_robot"
-              )}
-            </Typography>
+            <Styled.GoalsInformationCard>
+              <Styled.GoalsInformationCardTitle>
+                {t("dictionary.simulation_mode")}
+              </Styled.GoalsInformationCardTitle>
+              <Styled.GoalsInformationCardDescription>
+                {t(
+                  "dictionary.personal_account_simulation_mode_deposit_traded_period_yoko_robot"
+                )}
+              </Styled.GoalsInformationCardDescription>
+            </Styled.GoalsInformationCard>
           </Styled.GoalsFutureCard>
         </Styled.GoalsFutureBlock>
         <Button
@@ -934,44 +680,26 @@ const GeneralLending = (): JSX.Element => {
         </Button>
       </Styled.GoalsWrapper>
       <Styled.ReferralWrapper>
+      <Styled.ReferralWrapperImage
+          src={waveBackgroundImagePath}
+          alt="waveBackgroundImagePath"
+        />
         <Styled.ReferralInformationBlock>
-          <Typography
-            sx={{
-              fontWeight: "800",
-              fontSize: "54px",
-              lineHeight: "60px",
-              color: "#181938",
-            }}
-          >
+          <Styled.ReferralTitle>
             {t("dictionary.referral_program")}
-          </Typography>
-          <Typography
-            sx={{
-              margin: "25px 0 25px 0",
-              fontWeight: "400",
-              fontSize: "24px",
-              lineHeight: "36px",
-              color: "#9298B8",
-            }}
-          >
+          </Styled.ReferralTitle>
+          <Styled.ReferralDescription>
             {t("dictionary.invite_friends_earn")}
-          </Typography>
-          <Typography
-            sx={{
-              fontWeight: "400",
-              fontSize: "16px",
-              lineHeight: "25px",
-              color: "#181938",
-            }}
-          >
+          </Styled.ReferralDescription>
+          <Styled.ReferralSubDescription>
             {t(
               "dictionary.affiliate_program_profit_commission_withdraws_percentage_referral_crypto_profit_commission_withdraws_referral_wallet"
             )}
-          </Typography>
+          </Styled.ReferralSubDescription>
           <Button
-            sx={{ marginTop: "25px" }}
             startIcon={<PeopleAltIcon />}
             variant="contained"
+            size="large"
           >
             {t("dictionary.become_referral")}
           </Button>
@@ -980,143 +708,66 @@ const GeneralLending = (): JSX.Element => {
       </Styled.ReferralWrapper>
       <Styled.AboutWrapper>
         <Styled.AboutReviewsBlock>
-          <Typography
-            sx={{
-              fontWeight: "800",
-              fontSize: "54px",
-              lineHeight: "60px",
-              color: "#181938",
-            }}
-          >
+          <Styled.AboutTitle>
             {t("dictionary.clients_choose_us")}
-          </Typography>
+          </Styled.AboutTitle>
           <Styled.AboutReviewsCardsBlock>
             <Styled.AboutReviewsCardBlock>
               <Styled.AboutReviewsCardAvatar
                 src={userAvatarFix}
                 alt="userAvatarFix"
               />
-              <Typography
-                sx={{
-                  fontWeight: "400",
-                  fontSize: "16px",
-                  lineHeight: "25px",
-                  color: "#5E658D",
-                }}
-              >
+              <Styled.AboutReviewsCardTitle>
                 {t("dictionary.example_riviews")}
-              </Typography>
+              </Styled.AboutReviewsCardTitle>
             </Styled.AboutReviewsCardBlock>
             <Styled.AboutReviewsCardBlock>
               <Styled.AboutReviewsCardAvatar
                 src={userAvatarFix}
                 alt="userAvatarFix"
               />
-              <Typography
-                sx={{
-                  fontWeight: "400",
-                  fontSize: "16px",
-                  lineHeight: "25px",
-                  color: "#5E658D",
-                }}
-              >
+              <Styled.AboutReviewsCardTitle>
                 {t("dictionary.example_riviews")}
-              </Typography>
+              </Styled.AboutReviewsCardTitle>
             </Styled.AboutReviewsCardBlock>
           </Styled.AboutReviewsCardsBlock>
-          <Typography
-            sx={{
-              marginTop: "15%",
-              fontWeight: "800",
-              fontSize: "54px",
-              lineHeight: "60px",
-              color: "#181938",
-            }}
-          >
+          <Styled.AboutTitle>
             {t("dictionary.follow_our_blog")}
-          </Typography>
+          </Styled.AboutTitle>
         </Styled.AboutReviewsBlock>
         <Styled.AboutNotesCardsBlock>
           <Styled.AboutNotesCardBlock>
             <Styled.AboutNotesCardImage src={notesFix} alt="notesFix" />
-            <Typography
-              sx={{
-                marginTop: "20px",
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-              }}
-            >
+            <Styled.AboutNotesCardTitle>
               {t("dictionary.best_cryptocurrency_trading")}
-            </Typography>
-            <Typography
-              sx={{
-                marginTop: "10px",
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-              }}
-            >
+            </Styled.AboutNotesCardTitle>
+            <Styled.AboutNotesCardDescription>
               {t(
-                "cryptocurrency_changing_market _change_ratings_changes _version_article"
+                "dictionary.cryptocurrency_changing_market _change_ratings_changes _version_article"
               )}
-            </Typography>
+            </Styled.AboutNotesCardDescription>
           </Styled.AboutNotesCardBlock>
           <Styled.AboutNotesCardBlock>
             <Styled.AboutNotesCardImage src={notesFix} alt="notesFix" />
-            <Typography
-              sx={{
-                marginTop: "20px",
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-              }}
-            >
+            <Styled.AboutNotesCardTitle>
               {t("dictionary.best_cryptocurrency_trading")}
-            </Typography>
-            <Typography
-              sx={{
-                marginTop: "10px",
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-              }}
-            >
+            </Styled.AboutNotesCardTitle>
+            <Styled.AboutNotesCardDescription>
               {t(
-                "cryptocurrency_changing_market _change_ratings_changes _version_article"
+                "dictionary.cryptocurrency_changing_market _change_ratings_changes _version_article"
               )}
-            </Typography>
+            </Styled.AboutNotesCardDescription>
           </Styled.AboutNotesCardBlock>
           <Styled.AboutNotesCardBlock>
             <Styled.AboutNotesCardImage src={notesFix} alt="notesFix" />
-            <Typography
-              sx={{
-                marginTop: "20px",
-                fontWeight: "700",
-                fontSize: "24px",
-                lineHeight: "30px",
-                color: "#181938",
-              }}
-            >
+            <Styled.AboutNotesCardTitle>
               {t("dictionary.best_cryptocurrency_trading")}
-            </Typography>
-            <Typography
-              sx={{
-                marginTop: "10px",
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "25px",
-                color: "#181938",
-              }}
-            >
+            </Styled.AboutNotesCardTitle>
+            <Styled.AboutNotesCardDescription>
               {t(
-                "cryptocurrency_changing_market _change_ratings_changes _version_article"
+                "dictionary.cryptocurrency_changing_market _change_ratings_changes _version_article"
               )}
-            </Typography>
+            </Styled.AboutNotesCardDescription>
           </Styled.AboutNotesCardBlock>
         </Styled.AboutNotesCardsBlock>
         <Styled.AboutImageBlock src={aboutDownPath} alt="aboutDownPath" />
