@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { start } from "repl";
 
 export const FooterWrapper = styled.footer`
   margin: 0 auto;
@@ -11,6 +10,18 @@ export const FooterWrapper = styled.footer`
   width: 1920px;
   background: #181938;
   box-sizing: border-box;
+
+  @media screen and (max-width: 1920px) {
+    width: 100%;
+    gap: 5%;
+  }
+
+  @media screen and (max-width: 834px) {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px 25px;
+  }
 `;
 
 export const PoliticsBlock = styled.div`
@@ -18,6 +29,11 @@ export const PoliticsBlock = styled.div`
   flex-flow: column nowrap;
   align-items: flex-start;
   gap: 20px;
+
+  @media screen and (max-width: 834px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const SectionsBlock = styled.div`
@@ -25,11 +41,9 @@ export const SectionsBlock = styled.div`
   flex-flow: column nowrap;
   align-items: flex-start;
   gap: 20px;
-`;
 
-export const SocialBlock = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 28px;
+  @media screen and (max-width: 834px) {
+    justify-content: center;
+    align-items: center;
+ 
 `;

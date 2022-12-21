@@ -1,15 +1,23 @@
 import { useState } from "react";
 import ModalPage, { ModalPageProps } from "ui/ModalPage";
+import { useAppDispatch } from "store/hook";
+import { deactiveModal } from "store/Modals";
 import Auth from "./componets/Auth";
 import Register from "./componets/Register";
 import { AuthMode } from "./AutnModal.types";
 
-type AutnModalProps = Pick<ModalPageProps, "open" | "onClose">;
+export const AutnModal = (): JSX.Element => {
+  const [open, setOpen] = useState(true);
+  const dispatch = useAppDispatch();
 
-const AutnModal = ({ open, onClose }: AutnModalProps) => {
   const [authMode, setAuthMode] = useState<AuthMode>("auth");
 
   const handleChangeAuthMode = (newMode: AuthMode) => setAuthMode(newMode);
+
+  const onClose = () => {
+    setOpen((prev) => !prev);
+    dispatch(deactiveModal());
+  };
 
   return (
     <ModalPage {...{ open, onClose }}>
@@ -18,5 +26,3 @@ const AutnModal = ({ open, onClose }: AutnModalProps) => {
     </ModalPage>
   );
 };
-
-export default AutnModal;
