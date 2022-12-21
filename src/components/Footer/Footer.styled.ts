@@ -34,7 +34,6 @@ export const PoliticsBlock = styled.div`
     justify-content: center;
     align-items: center;
   }
-
 `;
 
 export const SectionsBlock = styled.div`
@@ -48,4 +47,3 @@ export const SectionsBlock = styled.div`
     align-items: center;
  
 `;
-

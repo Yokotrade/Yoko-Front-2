@@ -39,7 +39,10 @@ const GeneralLending = (): JSX.Element => {
 
   return (
     <Styled.MainLendingWrapper>
-      <Styled.RobotBackgroundImageBlock src={upBlockImagePath} alt="upBlockImagePath"/>
+      <Styled.RobotBackgroundImageBlock
+        src={upBlockImagePath}
+        alt="upBlockImagePath"
+      />
       <Styled.RobotMainBlock>
         <Styled.RobotInformationBlock>
           <Styled.RobotTitle>
@@ -48,7 +51,11 @@ const GeneralLending = (): JSX.Element => {
           <Styled.RobotDescription>
             {t("dictionary.beginners_ordinary_people_professionals_traders")}
           </Styled.RobotDescription>
-          <Button startIcon={<RocketLaunchIcon />} variant="contained" size="large">
+          <Button
+            startIcon={<RocketLaunchIcon />}
+            variant="contained"
+            size="large"
+          >
             {t("dictionary.start_trial")}
           </Button>
         </Styled.RobotInformationBlock>
@@ -680,7 +687,7 @@ const GeneralLending = (): JSX.Element => {
         </Button>
       </Styled.GoalsWrapper>
       <Styled.ReferralWrapper>
-      <Styled.ReferralWrapperImage
+        <Styled.ReferralWrapperImage
           src={waveBackgroundImagePath}
           alt="waveBackgroundImagePath"
         />

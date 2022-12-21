@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const SocialBlock = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
+  justify-items: center;
   gap: 28px;
 `;

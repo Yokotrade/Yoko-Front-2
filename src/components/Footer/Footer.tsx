@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Typography from "@mui/material/Typography";
-import SocialIconBlock from 'components/SocialIconBlock'
+import SocialIconBlock from "components/SocialIconBlock";
 import LogoWhiteIcon from "icon/LogoWhite";
 
 import * as Styled from "./Footer.styled";
@@ -102,7 +102,7 @@ const Footer = () => {
           {t("header.about")}
         </Typography>
       </Styled.SectionsBlock>
-      <SocialIconBlock color="#ffffff"/>
+      <SocialIconBlock color="#ffffff" />
     </Styled.FooterWrapper>
   );
 };

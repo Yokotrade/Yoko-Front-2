@@ -5,10 +5,10 @@ import TwitterIcon from "icon/social/Twitter";
 import * as Styled from "./SocialIconBlock.styled";
 
 interface SocialIconBlockProps {
-    color: string;
+  color: string;
 }
 
-const SocialIconBlock = ({color} : SocialIconBlockProps) => {
+const SocialIconBlock = ({ color }: SocialIconBlockProps) => {
   return (
     <Styled.SocialBlock>
       <TwitterIcon {...{ color }} />

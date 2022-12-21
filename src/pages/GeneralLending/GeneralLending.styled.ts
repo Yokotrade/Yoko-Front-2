@@ -1109,7 +1109,7 @@ export const AboutWrapper = styled.div`
   width: 100%;
 
   @media screen and (max-width: 670px) {
-    padding: 0 15px 0 15px
+    padding: 0 15px 0 15px;
   }
 `;
 
@@ -1250,7 +1250,6 @@ export const AboutNotesCardBlock = styled.div`
     width: 100%;
     height: auto;
   }
-
 `;
 
 export const AboutNotesCardTitle = styled(Typography)`
@@ -1294,7 +1293,6 @@ export const AboutNotesCardImage = styled.img`
   width: 100%;
   height: 245.29px;
   border-radius: 5px;
-
 
   @media screen and (max-width: 1024px) {
     width: 340px;

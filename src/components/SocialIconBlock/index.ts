@@ -1,1 +1,1 @@
-export { default } from './SocialIconBlock'
+export { default } from "./SocialIconBlock";

@@ -33,10 +33,10 @@ export const RigthBlock = styled(Stack)`
   justify-content: flex-end;
 `;
 
-export const SocialWrapper = styled(Stack)`
+export const SocialWrapper = styled.div`
+  display: flex;
   align-items: center;
   justify-items: center;
-
   @media screen and (max-width: 690px) {
     display: none;
   }
@@ -56,13 +56,10 @@ export const HeaderMenuContentBlock = styled(Stack)`
   height: 100%;
 `;
 
-export const HeaderMenuSocialBlock = styled(Stack)`
-  margin-bottom: 60px !important;
-  margin-left: 0 !important;
-  margin-top: 0 !important;
-  align-self: center;
+export const HeaderMenuSocialBlock = styled.div`
+  display: flex;
+  align-content: center;
   justify-content: center;
-
   @media screen and (min-width: 691px) {
     display: none;
   }

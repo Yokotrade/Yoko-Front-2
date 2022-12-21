@@ -11,6 +11,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import AutnModal from "components/AuthModal";
 import UserInformation from "components/UserInformation";
+import SocialIconBlock from "components/SocialIconBlock";
 import LogoIcon from "icon/Logo";
 import UserIcon from "icon/User";
 import VKIcon from "icon/social/VK";
@@ -63,11 +64,8 @@ const Header = (): JSX.Element => {
         )}
       </Styled.LeftBlock>
       <Styled.RigthBlock direction="row" spacing={8}>
-        <Styled.SocialWrapper direction="row" spacing={2}>
-          <TwitterIcon color="#9298B8" />
-          <TelegramIcon color="#9298B8" />
-          <VKIcon color="#9298B8" />
-          <InstagramIcon color="#9298B8" />
+        <Styled.SocialWrapper>
+          <SocialIconBlock color="#9298B8" />
         </Styled.SocialWrapper>
         {!isAuth && (
           <>
@@ -125,11 +123,8 @@ const Header = (): JSX.Element => {
                   </ListItem>
                 ))}
               </List>
-              <Styled.HeaderMenuSocialBlock direction="row" spacing={6}>
-                <TwitterIcon color="#9298B8" />
-                <TelegramIcon color="#9298B8" />
-                <VKIcon color="#9298B8" />
-                <InstagramIcon color="#9298B8" />
+              <Styled.HeaderMenuSocialBlock>
+                <SocialIconBlock color="#9298B8" />
               </Styled.HeaderMenuSocialBlock>
             </Styled.HeaderMenuContentBlock>
           </Drawer>
