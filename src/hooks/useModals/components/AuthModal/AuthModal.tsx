@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ModalPage, { ModalPageProps } from "ui/ModalPage";
+import ModalPage from "ui/ModalPage";
 import { useAppDispatch } from "store/hook";
 import { deactiveModal } from "store/Modals";
 import Auth from "./componets/Auth";

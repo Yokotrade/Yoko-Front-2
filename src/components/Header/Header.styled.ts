@@ -21,7 +21,7 @@ export const ActionWrapper = styled(Stack)`
   margin-left: 5%;
   align-items: center;
   justify-items: center;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1276px) {
     display: none;
   }
 `;
@@ -44,7 +44,7 @@ export const SocialWrapper = styled.div`
 
 export const HeaderMenuBlock = styled.div`
   margin-left: 0 !important;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1276px) {
     display: none;
   }
 `;

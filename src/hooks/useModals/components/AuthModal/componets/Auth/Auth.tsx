@@ -45,26 +45,28 @@ const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Button
-                sx={{ background: cyan[50], color: blue[700] }}
-                fullWidth
-                size="large"
-                color="info"
-                variant="contained"
-                onClick={() => handleChangeAuthMode("register")}
-              >
-                {t("auth.register")}
-              </Button>
-              <Button
-                sx={{ background: cyan[50], color: blue[700] }}
-                fullWidth
-                size="large"
-                color="info"
-                variant="contained"
-                onClick={() => props.handleSubmit()}
-              >
-                {t("auth.authorization")}
-              </Button>
+              <Styled.ActionsAuthBlock>
+                <Button
+                  sx={{ background: cyan[50], color: blue[700] }}
+                  fullWidth
+                  size="large"
+                  color="info"
+                  variant="contained"
+                  onClick={() => handleChangeAuthMode("register")}
+                >
+                  {t("auth.register")}
+                </Button>
+                <Button
+                  sx={{ background: cyan[50], color: blue[700] }}
+                  fullWidth
+                  size="large"
+                  color="info"
+                  variant="contained"
+                  onClick={() => props.handleSubmit()}
+                >
+                  {t("auth.authorization")}
+                </Button>
+              </Styled.ActionsAuthBlock>
             </Stack>
           </Stack>
         )}
