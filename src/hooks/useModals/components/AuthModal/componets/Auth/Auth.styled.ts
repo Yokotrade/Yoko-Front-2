@@ -9,7 +9,7 @@ export const AuthWrapper = styled.div`
   justify-content: center;
   background: #5f5cec;
   gap: 24px;
-  width: 597px;
+  width: 100%;
   box-sizing: border-box;
 `;
 
@@ -18,4 +18,19 @@ export const AuthTitle = styled(Typography)`
   line-height: 63px;
   color: #ffffff;
   width: 100%;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 670px) {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+  }
+`;
+
+export const ActionsAuthBlock = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 `;

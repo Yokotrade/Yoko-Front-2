@@ -670,8 +670,7 @@ export const BotTrainingStepIconBlock = styled.div`
 // Start LK Block
 
 export const LKInformationWrapper = styled.div`
-  margin-top: -4%;
-  padding: 0 40px 0 40px;
+  padding: 10% 40px 0 40px;
   position: relative;
   display: flex;
   align-items: center;
@@ -716,8 +715,8 @@ export const LKInformationBlock = styled.div`
 
 export const LKInformationTitle = styled(Typography)`
   font-weight: 800;
-  font-size: 70px;
-  line-height: 80px;
+  font-size: 54px;
+  line-height: 60px;
   color: #181938;
 
   @media screen and (max-width: 1200px) {
@@ -739,13 +738,13 @@ export const LKInformationTitle = styled(Typography)`
 export const LKInformationDescription = styled(Typography)`
   margin: 25px 0 0 0;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 36px;
   color: #181938;
 
   @media screen and (max-width: 1200px) {
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 25px;
     text-align: center;
   }
 
