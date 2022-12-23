@@ -1,5 +1,8 @@
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useAppSelector, useAppDispatch } from "store/hook";
+import { isAuthUser } from "store/Auth";
+import { deactiveModal } from "store/Modals";
 import Lending from "pages/Lending";
 import Main from "pages/Main";
 import General from "pages/General";
@@ -15,7 +18,16 @@ import {
 } from "constants/path";
 
 const Routing = (): JSX.Element => {
-  const isAuth = false;
+  const isAuth = useAppSelector(isAuthUser);
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (isAuth) {
+      dispatch(deactiveModal());
+    }
+  }, [isAuth]);
+
   return useMemo(() => {
     if (!isAuth) {
       return (
@@ -28,9 +40,9 @@ const Routing = (): JSX.Element => {
         <Routes>
           <Route path={MAIN_PATH} element={<Main />}>
             <Route index key={GENERAL_PATH} element={<General />} />
-            <Route path={STATISTICS_PATH} element={<Statistics />} />
-            <Route path={REFERRAL_PATH} element={<Referral />} />
-            <Route path={COMMISSION_PATH} element={<Commission />} />
+            <Route index path={STATISTICS_PATH} element={<Statistics />} />
+            <Route index path={REFERRAL_PATH} element={<Referral />} />
+            <Route index path={COMMISSION_PATH} element={<Commission />} />
           </Route>
         </Routes>
       );

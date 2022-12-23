@@ -1,12 +1,20 @@
+import { useAppSelector } from "store/hook";
+import { userSelectors } from "store/Auth";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import LogoutIcon from "@mui/icons-material/Logout";
 import UserAvatar from "icon/UserAvatar";
 import * as Styled from "./UserInformation.styled";
 
-const UserInformation = () => {
+export interface UserInformationProps {
+  isSideBar?: boolean;
+}
+
+const UserInformation = (props: UserInformationProps) => {
+  const { isSideBar } = props;
+  const user = useAppSelector(userSelectors);
   return (
-    <Styled.UserInformationWrapper>
+    <Styled.UserInformationWrapper {...{ isSideBar }}>
       <Styled.IconBlock>
         <UserAvatar />
       </Styled.IconBlock>
@@ -21,7 +29,7 @@ const UserInformation = () => {
               color: "#181938",
             }}
           >
-            Tany
+            {user?.FirstName || ""}
           </Typography>
           <Typography
             sx={{
@@ -32,7 +40,7 @@ const UserInformation = () => {
               color: "#9298B8",
             }}
           >
-            ID: 301514
+            ID: {user?.ID || ""}
           </Typography>
         </Styled.UserUIDBlock>
         <Typography
@@ -44,7 +52,7 @@ const UserInformation = () => {
             color: "#181938",
           }}
         >
-          tany@gmail.com
+          {user?.Login || ""}
         </Typography>
       </Styled.UserInformationBlock>
       <IconButton>

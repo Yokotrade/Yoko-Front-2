@@ -13,6 +13,11 @@ export const CardContentWrapper = styled.div`
   border-radius: 20px;
   box-sizing: border-box;
   gap: 20px;
+
+  @media screen and (max-width: 1024px) {
+    width: 342px;
+    height: 76px;
+  }
 `;
 
 export const CardInformationBlock = styled.div`

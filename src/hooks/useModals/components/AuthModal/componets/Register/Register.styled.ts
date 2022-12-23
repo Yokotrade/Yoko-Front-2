@@ -9,7 +9,7 @@ export const RegisterWrapper = styled.div`
   justify-content: center;
   background: #5f5cec;
   gap: 24px;
-  width: 597px;
+  width: 100%;
   box-sizing: border-box;
 `;
 
@@ -18,4 +18,11 @@ export const RegisterTitle = styled(Typography)`
   line-height: 63px;
   color: #ffffff;
   width: 100%;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 670px) {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+  }
 `;

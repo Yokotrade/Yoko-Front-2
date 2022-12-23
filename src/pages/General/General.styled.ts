@@ -5,6 +5,13 @@ export const GeneralPageWrapper = styled.div`
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1024px) {
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
 `;
 
 export const GeneralCardsBlock = styled.div`
@@ -12,4 +19,16 @@ export const GeneralCardsBlock = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   gap: 10px;
+
+  @media screen and (max-width: 1392px) {
+    flex-flow: column nowrap;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-flow: row nowrap;
+  }
+
+  @media screen and (max-width: 715px) {
+    flex-flow: column nowrap;
+  }
 `;

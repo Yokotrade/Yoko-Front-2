@@ -1,34 +1,15 @@
-type ResultResponse = {
-  error: string;
-  success: boolean;
-};
+import { User, MockUser } from "./user";
 
 export interface AuthResponse {
-  id: string;
-  token: string;
-  result: ResultResponse;
+  error: string;
+  success: boolean;
+  data: User;
 }
 
 export const AuthResponseSuccess: AuthResponse = {
-  id: "25",
-  token: "637faa0a0dcd45.65589015",
-  result: {
-    error: "",
-    success: true,
-  },
-};
-
-export const AuthResponseError: AuthResponse = {
-  id: "25",
-  token: "637faa0a0dcd45.65589015",
-  result: {
-    error: "Не верный логин или пароль",
-    success: false,
-  },
-};
-
-export const RegisterMockIsCompleted = {
+  error: "",
   success: true,
+  data: MockUser,
 };
 
 export type AuthUserDto = {

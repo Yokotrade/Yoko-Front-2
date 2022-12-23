@@ -3,7 +3,11 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 
-export const HeaderWrapper = styled.header`
+interface HeaderWrapperProps {
+  isAuth: boolean;
+}
+
+export const HeaderWrapper = styled.header<HeaderWrapperProps>`
   position: relative;
   z-index: 3;
   background: #ffffff;
@@ -15,13 +19,17 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   padding: 12px 20px;
   box-sizing: border-box;
+
+  @media screen and (max-width: 1024px) {
+    display: ${({ isAuth }) => (isAuth ? "none" : "flex")};
+  }
 `;
 
 export const ActionWrapper = styled(Stack)`
   margin-left: 5%;
   align-items: center;
   justify-items: center;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1276px) {
     display: none;
   }
 `;
@@ -44,7 +52,7 @@ export const SocialWrapper = styled.div`
 
 export const HeaderMenuBlock = styled.div`
   margin-left: 0 !important;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1276px) {
     display: none;
   }
 `;
