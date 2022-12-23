@@ -3,7 +3,11 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 
-export const HeaderWrapper = styled.header`
+interface HeaderWrapperProps {
+  isAuth: boolean;
+}
+
+export const HeaderWrapper = styled.header<HeaderWrapperProps>`
   position: relative;
   z-index: 3;
   background: #ffffff;
@@ -15,6 +19,10 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   padding: 12px 20px;
   box-sizing: border-box;
+
+  @media screen and (max-width: 1024px) {
+    display: ${({ isAuth }) => (isAuth ? "none" : "flex")};
+  }
 `;
 
 export const ActionWrapper = styled(Stack)`

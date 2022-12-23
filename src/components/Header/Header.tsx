@@ -9,7 +9,8 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import { useAppDispatch } from "store/hook";
+import { useAppDispatch, useAppSelector } from "store/hook";
+import { isAuthUser } from "store/Auth";
 import { activeModal } from "store/Modals";
 import UserInformation from "components/UserInformation";
 import SocialIconBlock from "components/SocialIconBlock";
@@ -24,7 +25,7 @@ import * as Styled from "./Header.styled";
 const Header = (): JSX.Element => {
   const { t, i18n } = useTranslation();
   const dispatch = useAppDispatch();
-  const isAuth = false;
+  const isAuth = useAppSelector(isAuthUser);
   const [openMenu, setOpenMenu] = useState(false);
   const handleOpenMenu = () => {
     setOpenMenu((prev) => !prev);
@@ -40,7 +41,7 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <Styled.HeaderWrapper>
+    <Styled.HeaderWrapper {...{ isAuth }}>
       <Styled.LeftBlock direction="row" spacing={8}>
         <LogoIcon />
         {!isAuth && (

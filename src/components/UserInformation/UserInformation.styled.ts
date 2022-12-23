@@ -1,14 +1,16 @@
+import { UserInformationProps } from "./UserInformation";
 import styled from "@emotion/styled";
 
-export const UserInformationWrapper = styled.div`
-  margin: 0 30px 0 30px;
+export const UserInformationWrapper = styled.div<UserInformationProps>`
+  margin: ${({ isSideBar }) => (isSideBar ? "0" : "0 30px 0 30px")};
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 10px;
   width: 202px;
   height: 52px;
-  background: #f4f7fe;
+  background: ${({ isSideBar }) =>
+    isSideBar ? "rgba(244, 247, 254, 0.1)" : "#f4f7fe"};
   border-radius: 5px;
   box-sizing: border-box;
   gap: 10px;
@@ -17,8 +19,9 @@ export const UserInformationWrapper = styled.div`
 export const UserInformationBlock = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2px;
 `;
 
 export const IconBlock = styled.div`
@@ -37,4 +40,5 @@ export const UserUIDBlock = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  gap: 5px;
 `;

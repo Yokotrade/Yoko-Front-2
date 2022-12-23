@@ -9,11 +9,14 @@ import * as Styled from "./CardContent.styled";
 
 interface ActionsProps {
   title: string;
+  disable: boolean;
+  action: () => void;
 }
 
 export interface CardContentProps {
   Icon: React.FC;
   title: string;
+  descriptionColor?: string;
   description?: string;
   actions?: ActionsProps[];
 }
@@ -23,6 +26,7 @@ const CardContent = ({
   title,
   description,
   actions,
+  descriptionColor,
 }: CardContentProps) => {
   const { t } = useTranslation();
   const [openMenu, setOpenMenu] = useState(false);
@@ -55,7 +59,7 @@ const CardContent = ({
               fontSize: "24px",
               lineHeight: "24px",
               letterSpacing: "0.3px",
-              color: "#05CD99",
+              color: descriptionColor ? descriptionColor : "#05CD99",
             }}
           >
             {t(description)}
@@ -88,8 +92,8 @@ const CardContent = ({
             },
           }}
         >
-          {actions?.map(({ title }) => (
-            <MenuItem key={title} onClick={handleOpenMenu}>
+          {actions?.map(({ title, disable, action }) => (
+            <MenuItem key={title} disabled={disable} onClick={() => action()}>
               {t(title)}
             </MenuItem>
           ))}
