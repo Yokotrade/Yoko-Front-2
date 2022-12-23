@@ -105,5 +105,33 @@
     "tune": "Настроить",
     "disable": "Отключить",
     "trade_balance": "Торговый баланс"
+  },
+  "grafic": {
+    "january": "Январь",
+    "february": "Февраль",
+    "march": "Март",
+    "april": "Апрель",
+    "may": "Май",
+    "june": "Июнь",
+    "july": "Июль",
+    "august": "Август",
+    "september": "Сентябрь",
+    "october": "Октябрь",
+    "november": "Ноябрь",
+    "december": "Декабрь",
+    "monday": "Понедельник",
+    "tuesday": "Вторник",
+    "wednesday": "Среда",
+    "thursday": "Четверг",
+    "friday": "Пятница",
+    "saturday": "Суббота",
+    "sunday": "Воскресенье"
+  },
+  "general": {
+    "profit_all_time": "Прибыль за все время",
+    "date": "Дата",
+    "number_transactions": "Кол-во сделок",
+    "profit": "Прибыль",
+    "join_us": "Присоединяйся к нам"
   }
 }

@@ -1,7 +1,14 @@
-import { InitialState as UserState } from "./User";
 import { InitialState as ModalsState } from "./Modals";
+import { InitialState as AuthState } from "./Auth";
 
+import { AppDispatch } from "./store";
 export interface Store {
-  userReducer: UserState;
   modalsReducer: ModalsState;
+  authReducer: AuthState;
+}
+
+export interface AsyncThunkConfig {
+  dispatch: AppDispatch;
+  state: Store;
+  rejectValue: string | null;
 }

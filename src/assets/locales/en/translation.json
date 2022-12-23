@@ -105,5 +105,33 @@
     "tune": "Tune",
     "disable": "Disable",
     "trade_balance": "Trade balance"
+  },
+  "grafic": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December",
+    "monday": "ПонMondayедельник",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  },
+  "general": {
+    "profit_all_time": "Profit for all time",
+    "date": "Дата",
+    "number_transactions": "Number of transactions",
+    "profit": "Прибыль",
+    "join_us": "Join us"
   }
 }

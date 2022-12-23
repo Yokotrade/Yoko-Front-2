@@ -4,6 +4,8 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { deepPurple, cyan, blue } from "@mui/material/colors";
+import { useAppDispatch } from "store/hook";
+import { registerUser } from "store/Auth";
 import InputField from "ui/InputField";
 import { AuthComponentProps } from "../../AutnModal.types";
 import {
@@ -15,8 +17,11 @@ import * as Styled from "./Register.styled";
 
 const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
   const { t } = useTranslation();
+
+  const dispatch = useAppDispatch();
+
   const handleSubmit = async (values: RegisterInitialValues) => {
-    console.log(values);
+    dispatch(registerUser(values));
   };
 
   return (

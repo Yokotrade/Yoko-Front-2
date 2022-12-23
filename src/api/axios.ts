@@ -2,10 +2,6 @@ import axios from "axios";
 
 const BASE_URL = "https://yokotrade.ru/API/";
 
-const instance = axios.create({
-  baseURL: BASE_URL,
-});
-
 // Add a request interceptor
 axios.interceptors.request.use(
   function (config) {
@@ -32,4 +28,32 @@ axios.interceptors.response.use(
   }
 );
 
-export default instance;
+class Http {
+  constructor(private readonly apiUrl = "/") {}
+
+  instance = axios.create({
+    baseURL: this.apiUrl,
+  });
+
+  async post<T = unknown, K = unknown>(url: string, body: K): Promise<T> {
+    try {
+      const response = await this.instance.post<K, T>(url, body);
+      return response;
+    } catch (e) {
+      throw e;
+    }
+  }
+
+  async get<T = unknown>(url: string): Promise<T> {
+    try {
+      const response = await this.instance.get<any, T>(url);
+      return response;
+    } catch (e) {
+      throw e;
+    }
+  }
+}
+
+const http = new Http(BASE_URL);
+
+export default http;
