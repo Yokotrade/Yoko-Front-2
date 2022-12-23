@@ -27,8 +27,6 @@ const SideBar = () => {
   const location = useLocation();
   const path = location.pathname;
   const handleNavigate = (path: string) => navigate(path);
-  console.log(open);
-
   if (!open)
     return (
       <Styled.MenuButton onClick={() => setOpen(true)}>
