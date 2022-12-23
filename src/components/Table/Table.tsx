@@ -41,7 +41,7 @@ const Table = (props: TableProps) => {
       page * elementOfPage + elementOfPage
     );
   }, [page, elementOfPage]);
-  console.log(elementOfPage);
+  
   if (!isDesktop) {
     return (
       <Styled.TableWrapper>

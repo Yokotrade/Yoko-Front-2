@@ -64,7 +64,6 @@ const GraficBlock = (props: GraficBlockProps) => {
   };
 
   const { width, height } = getGraficWidthHeigth();
-  console.log(width, height);
   return (
     <Styled.GraficWrapper>
       <Styled.GraficActionsBlock>
