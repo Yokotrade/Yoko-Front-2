@@ -24,9 +24,9 @@ export const ContentWrapper = styled.div`
   height: 100%;
   width: 100%;
   box-sizing: border-box;
+  overflow-y: auto;
 
   @media screen and (max-width: 1024px) {
     padding: 65px 20px 20px 20px;
-    overflow: auto;
   }
 `;

@@ -32,3 +32,13 @@ export const GeneralCardsBlock = styled.div`
     flex-flow: column nowrap;
   }
 `;
+
+export const GeneralInformationBlock = styled.div`
+  margin-top: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+`;

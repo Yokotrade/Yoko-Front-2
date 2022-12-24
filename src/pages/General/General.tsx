@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import { useAppSelector } from "store/hook";
 import { userSelectors } from "store/Auth/selectors";
 import CardContent from "components/CardContent";
-import GrafficBlock from "components/GraficBlock";
+import GeneralTable from "./componets/GeneralTable";
 import { getGeneralCards } from "./utils/getGeneralCards";
 import { getFakeData } from "./utils/getFakeData";
 import * as Styled from "./General.styled";
@@ -32,11 +32,9 @@ const General = () => {
           <CardContent {...card} />
         ))}
       </Styled.GeneralCardsBlock>
-      <GrafficBlock
-        title={t("general.profit_all_time")}
-        description={`${user?.balance_local || 0}`}
-        tableData={fakeData}
-      />
+      <Styled.GeneralInformationBlock>
+        <GeneralTable {...fakeData} />
+      </Styled.GeneralInformationBlock>
     </Styled.GeneralPageWrapper>
   );
 };

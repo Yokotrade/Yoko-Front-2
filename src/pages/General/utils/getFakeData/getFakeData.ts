@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { TableProps } from "components/Table";
+import { TableProps } from "ui/Table";
 
-export const getFakeData = (): Pick<TableProps, "headCell" | "valueCell"> => {
+export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
   const { t } = useTranslation();
 
-  const headCell: TableProps["headCell"] = [
+  const head: TableProps["head"] = [
     {
       value: t("general.date"),
       align: "center",
@@ -22,7 +22,7 @@ export const getFakeData = (): Pick<TableProps, "headCell" | "valueCell"> => {
     },
   ];
 
-  const valueCell: TableProps["valueCell"] = [
+  const rows: TableProps["rows"] = [
     [
       {
         value: "23.04.2022",
@@ -212,7 +212,7 @@ export const getFakeData = (): Pick<TableProps, "headCell" | "valueCell"> => {
     ],
   ];
   return {
-    headCell,
-    valueCell,
+    head,
+    rows,
   };
 };
