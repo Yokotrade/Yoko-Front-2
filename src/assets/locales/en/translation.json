@@ -129,9 +129,9 @@
   },
   "general": {
     "profit_all_time": "Profit for all time",
-    "date": "Дата",
+    "date": "Date",
     "number_transactions": "Number of transactions",
-    "profit": "Прибыль",
+    "profit": "Profit",
     "join_us": "Join us"
   }
 }
