@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { color } from "@mui/system";
 
 interface CellProps {
   color: string;
@@ -10,13 +9,21 @@ interface CellProps {
 export const TableWrapper = styled.table`
   display: flex;
   align-content: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-flow: column nowrap;
   padding: 30px;
   width: 100%;
+  min-height: 572px;
   box-shadow: 0px 10px 20px rgba(112, 144, 176, 0.07);
   border-radius: 20px;
   background: #ffffff;
+`;
+
+export const TableContentBlock = styled.div`
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
   box-sizing: border-box;
 `;
 
@@ -25,9 +32,9 @@ export const HeadRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0px 10px 20px rgba(112, 144, 176, 0.07);
   box-sizing: border-box;
   height: 44px;
+  background: none;
 `;
 
 export const HeadCell = styled.div<CellProps>`

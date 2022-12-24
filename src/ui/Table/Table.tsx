@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Pagination from "./components/Pagination";
 import * as Styled from "./Table.styled";
 interface CellValues {
   color: string;
@@ -15,27 +17,35 @@ export interface TableProps {
 
 const Table = (props: TableProps) => {
   const { head, rows, cellWidth } = props;
+  const [activePage, setActivePage] = useState(1);
+  const handleChangeActivePage = (pageNumber: number) =>
+    setActivePage(pageNumber);
 
   return (
     <Styled.TableWrapper>
-      <Styled.HeadRow>
-        {head.map(({ color, align, value }) => (
-          <Styled.HeadCell {...{ color, align, cellWidth }}>
-            {value}
-          </Styled.HeadCell>
-        ))}
-      </Styled.HeadRow>
-      <Styled.BodyBlock>
-        {rows.map((cells) => (
-          <Styled.BodyRow>
-            {cells.map(({ color, align, value }) => (
-              <Styled.BodyCell {...{ color, align, cellWidth }}>
-                {value}
-              </Styled.BodyCell>
+      <Styled.TableContentBlock>
+        <Styled.HeadRow>
+          {head.map(({ color, align, value }) => (
+            <Styled.HeadCell {...{ color, align, cellWidth }}>
+              {value}
+            </Styled.HeadCell>
+          ))}
+        </Styled.HeadRow>
+        <Styled.BodyBlock>
+          {rows
+            .slice((activePage - 1) * 10, (activePage - 1) * 10 + 10)
+            .map((cells) => (
+              <Styled.BodyRow>
+                {cells.map(({ color, align, value }) => (
+                  <Styled.BodyCell {...{ color, align, cellWidth }}>
+                    {value}
+                  </Styled.BodyCell>
+                ))}
+              </Styled.BodyRow>
             ))}
-          </Styled.BodyRow>
-        ))}
-      </Styled.BodyBlock>
+        </Styled.BodyBlock>
+      </Styled.TableContentBlock>
+      <Pagination tableRows={rows} {...{ handleChangeActivePage }} />
     </Styled.TableWrapper>
   );
 };
