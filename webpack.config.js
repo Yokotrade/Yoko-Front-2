@@ -1,4 +1,3 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
 const Dotenv = require("dotenv-webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -18,6 +17,7 @@ const config = {
   devServer: {
     open: true,
     host: "localhost",
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

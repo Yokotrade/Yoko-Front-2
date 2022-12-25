@@ -3,6 +3,7 @@ import { IconButton } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { TableProps } from "../../Table";
+import { VALUES_OF_PAGE } from "../../Table";
 import * as Styled from "./Pagination.styled";
 
 interface PaginationProps {
@@ -13,7 +14,7 @@ interface PaginationProps {
 const Pagination = (props: PaginationProps) => {
   const { handleChangeActivePage, tableRows } = props;
   const [activePage, setActivePage] = useState(1);
-  const countPages = Math.ceil(tableRows.length / 10);
+  const countPages = Math.ceil(tableRows.length / VALUES_OF_PAGE);
   useEffect(() => {
     handleChangeActivePage(activePage);
   }, []);

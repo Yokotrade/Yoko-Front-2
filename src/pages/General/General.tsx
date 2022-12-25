@@ -32,7 +32,7 @@ const General = () => {
           <CardContent {...card} />
         ))}
       </Styled.GeneralCardsBlock>
-      <Styled.GeneralInformationBlock>
+      <Styled.GeneralInformationBlock id="generalInformationBlock">
         <GeneralTable {...fakeData} />
       </Styled.GeneralInformationBlock>
     </Styled.GeneralPageWrapper>
