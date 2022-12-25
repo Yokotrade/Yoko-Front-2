@@ -66,39 +66,41 @@ const CardContent = ({
           </Typography>
         )}
       </Styled.CardInformationBlock>
-      <Styled.PopupMenuWrapper>
-        <IconButton
-          aria-label="more"
-          id="long-button"
-          aria-controls={openMenu ? "long-menu" : undefined}
-          aria-expanded={openMenu ? "true" : undefined}
-          aria-haspopup="true"
-          onClick={handleOpenMenu}
-        >
-          <MoreVertIcon />
-        </IconButton>
-        <Menu
-          id="long-menu"
-          MenuListProps={{
-            "aria-labelledby": "long-button",
-          }}
-          anchorEl={anchorEl}
-          open={openMenu}
-          onClose={handleOpenMenu}
-          PaperProps={{
-            style: {
-              maxHeight: 48 * 4.5,
-              width: "20ch",
-            },
-          }}
-        >
-          {actions?.map(({ title, disable, action }) => (
-            <MenuItem key={title} disabled={disable} onClick={() => action()}>
-              {t(title)}
-            </MenuItem>
-          ))}
-        </Menu>
-      </Styled.PopupMenuWrapper>
+      {actions?.length && (
+        <Styled.PopupMenuWrapper>
+          <IconButton
+            aria-label="more"
+            id="long-button"
+            aria-controls={openMenu ? "long-menu" : undefined}
+            aria-expanded={openMenu ? "true" : undefined}
+            aria-haspopup="true"
+            onClick={handleOpenMenu}
+          >
+            <MoreVertIcon />
+          </IconButton>
+          <Menu
+            id="long-menu"
+            MenuListProps={{
+              "aria-labelledby": "long-button",
+            }}
+            anchorEl={anchorEl}
+            open={openMenu}
+            onClose={handleOpenMenu}
+            PaperProps={{
+              style: {
+                maxHeight: 48 * 4.5,
+                width: "20ch",
+              },
+            }}
+          >
+            {actions?.map(({ title, disable, action }) => (
+              <MenuItem key={title} disabled={disable} onClick={() => action()}>
+                {t(title)}
+              </MenuItem>
+            ))}
+          </Menu>
+        </Styled.PopupMenuWrapper>
+      )}
     </Styled.CardContentWrapper>
   );
 };

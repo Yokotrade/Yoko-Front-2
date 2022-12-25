@@ -28,6 +28,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "23.04.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "13",
@@ -38,6 +39,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "28.72",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
     [
@@ -45,6 +47,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "05.05.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "16",
@@ -55,6 +58,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "43.72",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
     [
@@ -62,6 +66,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "15.05.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "42",
@@ -72,6 +77,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "22.72",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
     [
@@ -79,6 +85,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "10.05.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "21",
@@ -89,6 +96,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "88.72",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
     [
@@ -96,6 +104,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "24.10.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "11",
@@ -106,6 +115,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "11",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
     [
@@ -113,6 +123,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "05.06.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "41",
@@ -123,6 +134,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "16.16",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
     [
@@ -130,6 +142,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "10.06.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "24",
@@ -140,6 +153,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "42.24",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
     [
@@ -147,6 +161,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "12.06.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "25",
@@ -157,6 +172,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "41.11",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
     [
@@ -164,6 +180,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "16.06.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "41",
@@ -174,6 +191,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "12.72",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
     [
@@ -181,6 +199,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "19.06.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "49",
@@ -191,6 +210,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "41.72",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
     [
@@ -198,6 +218,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "21.06.2022",
         align: "center",
         color: "#181938",
+        isTitleGrafic: true,
       },
       {
         value: "31",
@@ -208,6 +229,7 @@ export const getFakeData = (): Pick<TableProps, "head" | "rows"> => {
         value: "11.11",
         align: "center",
         color: "#181938",
+        isValueGrafic: true,
       },
     ],
   ];

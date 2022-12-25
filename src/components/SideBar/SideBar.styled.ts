@@ -14,7 +14,7 @@ export const SideBarWrapper = styled.div<SideBarWrapperprops>`
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  height: 100%;
+  min-height: 100%;
   ${({ isPosition }) =>
     isPosition &&
     `

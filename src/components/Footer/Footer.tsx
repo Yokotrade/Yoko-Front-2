@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Typography from "@mui/material/Typography";
+import { useAppSelector } from "store/hook";
+import { isAuthUser } from "store/Auth";
 import SocialIconBlock from "components/SocialIconBlock";
 import LogoWhiteIcon from "icon/LogoWhite";
 
@@ -7,6 +9,19 @@ import * as Styled from "./Footer.styled";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const isAuth = useAppSelector(isAuthUser);
+  if (isAuth) {
+    return (
+      <Styled.FooterAuthWrapper>
+        <Styled.FooterAuthText>
+          {t("footer.privacy_policy")}
+        </Styled.FooterAuthText>
+        <Styled.FooterAuthText>
+          {t("footer.terms_of_use")}
+        </Styled.FooterAuthText>
+      </Styled.FooterAuthWrapper>
+    );
+  }
   return (
     <Styled.FooterWrapper>
       <LogoWhiteIcon />

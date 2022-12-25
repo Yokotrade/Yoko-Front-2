@@ -26,15 +26,16 @@ export const RobotMainBlock = styled.div`
     padding: 80px 40px 0 40px;
     justify-content: space-around;
     max-width: 1200px;
+    overflow-x: hidden;
   }
 
   @media screen and (max-width: 995px) {
     flex-flow: column nowrap;
     justify-items: center;
     align-items: center;
+    overflow-x: hidden;
   }
 `;
-
 export const RobotBackgroundImageBlock = styled.img`
   position: absolute;
   top: 0;
@@ -51,6 +52,7 @@ export const RobotInformationBlock = styled.div`
   justify-content: space-around;
   flex-flow: column nowrap;
   max-width: 800px;
+  box-sizing: border-box;
   @media screen and (max-width: 995px) {
     justify-items: center;
     align-items: center;
@@ -92,6 +94,12 @@ export const RobotTitle = styled(Typography)`
     font-size: 37px;
     line-height: 40px;
   }
+
+  @media screen and (max-width: 380px) {
+    text-align: center;
+    font-size: 32px;
+    line-height: 34px;
+  }
 `;
 
 export const RobotDescription = styled(Typography)`
@@ -103,7 +111,7 @@ export const RobotDescription = styled(Typography)`
   @media screen and (max-width: 1200px) {
     font-weight: 300;
     line-height: 40px;
-    width: 450px;
+    max-width: 450px;
   }
 
   @media screen and (max-width: 995px) {
@@ -115,6 +123,13 @@ export const RobotDescription = styled(Typography)`
     font-weight: 300;
     font-size: 20px;
     line-height: 28px;
+  }
+
+  @media screen and (max-width: 380px) {
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 320px;
   }
 `;
 

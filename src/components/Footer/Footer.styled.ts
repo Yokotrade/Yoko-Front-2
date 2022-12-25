@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Typography } from "@mui/material";
 
 export const FooterWrapper = styled.footer`
   margin: 0 auto;
@@ -45,5 +46,21 @@ export const SectionsBlock = styled.div`
   @media screen and (max-width: 834px) {
     justify-content: center;
     align-items: center;
- 
+  }
+`;
+
+export const FooterAuthWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: flex-start;
+`;
+
+export const FooterAuthText = styled(Typography)`
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.3px;
+  color: #9298b8;
 `;

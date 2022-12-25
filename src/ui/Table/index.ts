@@ -1,1 +1,1 @@
-export { default, TableProps } from "./Table";
+export { default, TableProps, VALUES_OF_PAGE } from "./Table";
