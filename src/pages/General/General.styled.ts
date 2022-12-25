@@ -45,4 +45,5 @@ export const GeneralInformationBlock = styled.div`
   background-color: #fff;
   box-shadow: 0px 10px 20px rgba(112, 144, 176, 0.07);
   border-radius: 20px;
+  overflow: hidden;
 `;
