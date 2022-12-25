@@ -48,8 +48,8 @@ const LineCharts = (props: LineChartsProps) => {
           <stop offset="95%" stopColor="rgba(95, 92, 236, 0)" stopOpacity={0} />
         </linearGradient>
       </defs>
-      <XAxis dataKey="name" />
-      <YAxis />
+      <XAxis dataKey="name" tickLine={false} axisLine={false} />
+      <YAxis tickLine={false} axisLine={false} />
       <CartesianGrid strokeDasharray="3 3" />
       <Tooltip
         content={<CustomTooltip title={valueKey} valuePrifix="USDT" />}

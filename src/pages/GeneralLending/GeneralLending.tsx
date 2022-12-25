@@ -43,7 +43,7 @@ const GeneralLending = (): JSX.Element => {
     dispatch(activeModal("auth"));
   };
   return (
-    <Styled.MainLendingWrapper>
+    <Styled.MainLendingWrapper className="test">
       <Styled.RobotBackgroundImageBlock
         src={upBlockImagePath}
         alt="upBlockImagePath"
