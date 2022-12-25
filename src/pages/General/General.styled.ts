@@ -38,7 +38,7 @@ export const GeneralInformationBlock = styled.div`
   padding: 10px 0 0 0;
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
