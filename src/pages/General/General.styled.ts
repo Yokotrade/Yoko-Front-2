@@ -6,7 +6,7 @@ export const GeneralPageWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   box-sizing: border-box;
-
+  width: 100%;
   @media screen and (max-width: 1024px) {
     align-items: center;
     justify-content: center;
@@ -35,10 +35,14 @@ export const GeneralCardsBlock = styled.div`
 
 export const GeneralInformationBlock = styled.div`
   margin-top: 10px;
+  padding: 10px 0 0 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(112, 144, 176, 0.07);
+  border-radius: 20px;
 `;

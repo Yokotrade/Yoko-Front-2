@@ -4,11 +4,13 @@ import { useAppSelector, useAppDispatch } from "store/hook";
 import { isAuthUser } from "store/Auth";
 import { deactiveModal } from "store/Modals";
 import Lending from "pages/Lending";
-import Main from "pages/Main";
 import General from "pages/General";
 import Statistics from "pages/Statistics";
 import Referral from "pages/Referral";
 import Commission from "pages/Commission";
+import Header from "components/Header";
+import SideBar from "components/SideBar";
+import Footer from "components/Footer";
 import {
   MAIN_PATH,
   GENERAL_PATH,
@@ -16,6 +18,7 @@ import {
   REFERRAL_PATH,
   COMMISSION_PATH,
 } from "constants/path";
+import * as Styled from "./Routing.styled";
 
 const Routing = (): JSX.Element => {
   const isAuth = useAppSelector(isAuthUser);
@@ -37,14 +40,21 @@ const Routing = (): JSX.Element => {
       );
     } else {
       return (
-        <Routes>
-          <Route path={MAIN_PATH} element={<Main />}>
-            <Route index key={GENERAL_PATH} element={<General />} />
-            <Route index path={STATISTICS_PATH} element={<Statistics />} />
-            <Route index path={REFERRAL_PATH} element={<Referral />} />
-            <Route index path={COMMISSION_PATH} element={<Commission />} />
-          </Route>
-        </Routes>
+        <Styled.MainWrapper>
+          <Header />
+          <Styled.ActionsWrapper>
+            <SideBar />
+            <Styled.ContentWrapper>
+              <Routes>
+                <Route path={GENERAL_PATH} element={<General />} />
+                <Route path={STATISTICS_PATH} element={<Statistics />} />
+                <Route path={REFERRAL_PATH} element={<Referral />} />
+                <Route path={COMMISSION_PATH} element={<Commission />} />
+              </Routes>
+              <Footer />
+            </Styled.ContentWrapper>
+          </Styled.ActionsWrapper>
+        </Styled.MainWrapper>
       );
     }
   }, [isAuth]);

@@ -13,7 +13,6 @@ export const TableWrapper = styled.table`
   flex-flow: column nowrap;
   padding: 30px;
   width: 100%;
-  min-height: 572px;
   box-shadow: 0px 10px 20px rgba(112, 144, 176, 0.07);
   border-radius: 20px;
   background: #ffffff;
