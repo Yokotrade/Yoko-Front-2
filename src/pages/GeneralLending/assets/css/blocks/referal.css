@@ -1,0 +1,72 @@
+.referal {
+  margin-top: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.referal__block {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.referal__button {
+  width: 223px;
+  background-image: url("../../icons/signs/users.svg");
+}
+.block_image.referal-block__image {
+  width: 50%;
+}
+.referal__image {
+  width: 100%;
+}
+.block_item-texts.terget-item-texts {
+  gap: 15px;
+}
+@media screen and (max-width: 1500px) {
+  .referal {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .referal {
+    gap: 0;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .referal-header {
+    white-space: nowrap;
+  }
+  .referal__block {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .referal {
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .referal__block {
+    width: 100%;
+    align-items: center;
+  }
+  .referal__desscription {
+    text-align: center;
+    width: 88%;
+  }
+  .referal__image {
+    min-width: 293px;
+  }
+  .referal-header {
+    white-space: normal;
+  }
+}
+@media screen and (max-width: 320px) {
+  .referal__image {
+    min-width: 253px;
+  }
+}

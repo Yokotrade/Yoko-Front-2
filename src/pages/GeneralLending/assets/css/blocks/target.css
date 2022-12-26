@@ -1,0 +1,186 @@
+.target {
+  min-height: 1773px;
+  background-image: url("../../img/bg/5bg.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.target__header {
+  margin-bottom: 55px;
+  text-align: center;
+}
+.target__wrapper {
+  padding: 156px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.target__block_header,
+.target_item_description {
+  text-align: center;
+}
+.target__image {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-color: #f4f7fe;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+}
+.target__down-blocks,
+.target__up-blocks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.target__up-blocks {
+  margin-bottom: 30px;
+}
+.target__down-block,
+.target__block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+.target__down-block {
+  min-height: 290px;
+  min-width: 685px;
+}
+.target__block {
+  min-width: 446px;
+  min-height: 420px;
+}
+.target__down-blocks {
+  margin-bottom: 55px;
+}
+.target__image.brain {
+  background-image: url("../../icons/violet/brain.svg");
+}
+.target__image.coins {
+  background-image: url("../../icons/violet/coins.svg");
+}
+
+.target__image.mech {
+  background-image: url("../../icons/violet/mech.svg");
+}
+.target__image.super-bot {
+  background-image: url("../../icons/violet/super-bot.svg");
+}
+.target__image.degree {
+  background-image: url("../../icons/violet/degree.svg");
+}
+.target__link {
+  text-decoration: none;
+  color: #5f5cec;
+}
+.targer__image_green-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58px;
+  height: 20px;
+  color: #ffffff;
+  font-size: 13px;
+  background: #05cd99;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.target__button {
+  width: 225px;
+  background-image: url("../../icons/signs/rocket.svg");
+}
+.block_item-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+@media screen and (max-width: 1500px) {
+  .target__up-blocks,
+  .target__down-blocks {
+    flex-wrap: wrap;
+  }
+  .target__down-block,
+  .target__block {
+    min-height: 290px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .target {
+    padding: 0;
+    min-height: 1612px;
+  }
+  .target__wrapper {
+    padding-top: 25px;
+  }
+  .block_item.target__block,
+  .target__down-block {
+    padding: 20px;
+    flex-direction: row;
+    min-width: 100%;
+    min-height: fit-content;
+  }
+  .target__up-blocks,
+  .target__down-blocks {
+    flex-direction: column;
+  }
+  .block_item-texts {
+    width: 80%;
+  }
+  .target__block_header,
+  .target_item_description {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .target {
+    background-image: url(../../img/bg/Vector-5-tablet.svg);
+  }
+}
+@media screen and (max-width: 575px) {
+  .target {
+    background-position: bottom 300px left 0;
+  }
+  .target__wrapper {
+    padding-top: 61px;
+  }
+  .block_item.target__block,
+  .target__down-block {
+    padding: 20px;
+    flex-direction: column;
+    width: 100%;
+    min-height: fit-content;
+  }
+  .target__block_header,
+  .target_item_description {
+    text-align: center;
+  }
+  .target_item_description,
+  .block_item-texts {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .block_item-texts {
+    gap: 20px;
+    align-items: center;
+  }
+  .target__block,
+  .target__down-block {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .target__up-blocks,
+  .target__down-blocks {
+    width: 100%;
+  }
+  .block_item_title.target__block_header {
+    white-space: normal;
+  }
+}

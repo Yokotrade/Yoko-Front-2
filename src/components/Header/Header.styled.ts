@@ -16,7 +16,7 @@ export const HeaderWrapper = styled.header<HeaderWrapperProps>`
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 12px 20px;
   box-sizing: border-box;
 
@@ -52,7 +52,9 @@ export const SocialWrapper = styled.div`
 
 export const HeaderMenuBlock = styled.div`
   margin-left: 0 !important;
-  @media screen and (min-width: 1276px) {
+  display: flex;
+  align-items: center;
+  justify-items: center @media screen and (min-width: 1276px) {
     display: none;
   }
 `;
@@ -73,7 +75,11 @@ export const HeaderMenuSocialBlock = styled.div`
   }
 `;
 
-export const UserRegistrationBtn = styled(Button)`
+export const UserRegistrationBtn = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   margin-left: 0 !important;
   background: #f4f7fe;
   color: #5f5cec;
@@ -135,4 +141,10 @@ export const LanguagesText = styled.span`
   color: #181938;
   padding: 0;
   margin: 0;
+`;
+
+export const MenuIconButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

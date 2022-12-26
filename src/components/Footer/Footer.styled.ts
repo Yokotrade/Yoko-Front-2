@@ -8,7 +8,7 @@ export const FooterWrapper = styled.footer`
   align-items: flex-start;
   padding: 50px 50px;
   gap: 228px;
-  width: 1920px;
+  width: 100%;
   background: #181938;
   box-sizing: border-box;
 

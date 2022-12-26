@@ -1,14 +1,18 @@
+import { useEffect } from "react";
 import { Formik } from "formik";
 import { useTranslation } from "react-i18next";
-import { green } from "@mui/material/colors";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+import ButtonLib from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import CircularProgress from "@mui/material/CircularProgress";
-import { cyan, blue, deepPurple } from "@mui/material/colors";
+import { deepPurple } from "@mui/material/colors";
 import { useAppDispatch, useAppSelector } from "store/hook";
-import { loginUser, isLoading } from "store/Auth";
+import {
+  loginUser,
+  isLoadingSelector,
+  errorSelector,
+  cleanError,
+} from "store/Auth";
 import InputField from "ui/InputField";
+import Button from "ui/Button";
 import { AuthComponentProps } from "../../AutnModal.types";
 import {
   AuthInitialValues,
@@ -21,32 +25,52 @@ const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
   const { t } = useTranslation();
 
   const dispatch = useAppDispatch();
-  const loading = useAppSelector(isLoading);
+  const loading = useAppSelector(isLoadingSelector);
+  const error = useAppSelector(errorSelector);
   const handleSubmit = async (values: AuthInitialValues) => {
     dispatch(loginUser(values));
   };
+
+  useEffect(() => {
+    return () => {
+      dispatch(cleanError());
+    };
+  }, []);
 
   return (
     <Styled.AuthWrapper>
       <Styled.AuthTitle variant="h3" align="center">
         {t("auth.title")}
       </Styled.AuthTitle>
-      <Formik onSubmit={handleSubmit} {...{ initialValues, validationSchema }}>
+      <Formik
+        onSubmit={handleSubmit}
+        validateOnChange={false}
+        {...{ initialValues, validationSchema }}
+      >
         {(props) => (
           <Stack spacing={4} sx={{ width: "100%" }}>
             <InputField
-              name="email"
+              name="Login"
               placeholder="Email"
               handleChange={props.handleChange}
+              error={props.errors.Login}
             />
             <InputField
-              name="password"
+              name="Password"
               placeholder={t("auth.password_input_placeholder")}
               handleChange={props.handleChange}
+              error={props.errors.Password}
             />
-            <Button sx={{ color: deepPurple[100] }} variant="text" size="small">
+            {error && (
+              <Styled.AuthErrorBlock>{t("auth.error")}</Styled.AuthErrorBlock>
+            )}
+            <ButtonLib
+              sx={{ color: deepPurple[100] }}
+              variant="text"
+              size="small"
+            >
               {t("auth.forgot")}
-            </Button>
+            </ButtonLib>
             <Stack
               sx={{ width: "100%" }}
               direction="row"
@@ -56,41 +80,20 @@ const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
             >
               <Styled.ActionsAuthBlock>
                 <Button
-                  sx={{ background: cyan[50], color: blue[700] }}
-                  fullWidth
-                  size="large"
-                  color="info"
-                  variant="contained"
+                  title={t("auth.register")}
+                  background="#5F5CEC"
+                  textColor="#FFFFFF"
+                  borderRadius="15px"
                   onClick={() => handleChangeAuthMode("register")}
-                >
-                  {t("auth.register")}
-                </Button>
-
-                <Box sx={{ width: "100%", position: "relative" }}>
-                  <Button
-                    sx={{ background: cyan[50], color: blue[700] }}
-                    fullWidth
-                    size="large"
-                    color="info"
-                    variant="contained"
-                    onClick={() => props.handleSubmit()}
-                  >
-                    {t("auth.authorization")}
-                  </Button>
-                  {loading && (
-                    <CircularProgress
-                      size={24}
-                      sx={{
-                        color: green[500],
-                        position: "absolute",
-                        top: "50%",
-                        left: "50%",
-                        marginTop: "-12px",
-                        marginLeft: "-12px",
-                      }}
-                    />
-                  )}
-                </Box>
+                />
+                <Button
+                  title={t("auth.authorization")}
+                  background="#F4F7FE"
+                  textColor="#5F5CEC"
+                  borderRadius="15px"
+                  isLoading={loading}
+                  onClick={() => props.handleSubmit()}
+                />
               </Styled.ActionsAuthBlock>
             </Stack>
           </Stack>

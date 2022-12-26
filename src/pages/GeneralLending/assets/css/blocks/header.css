@@ -1,0 +1,217 @@
+/* main header */
+
+.header {
+  width: 100%;
+  position: relative;
+  min-height: 70px;
+  background: #ffffff;
+  box-shadow: 0px 25px 20px -25px rgba(20, 25, 143, 0.1);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 124px; */
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-size: 15px;
+  gap: 25px;
+}
+.header__menu_link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.header__social_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.header__social-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.header__social-contacts_item {
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header__social-contacts_item.twitter-header {
+  background-image: url("../../icons/social/twitter-header.svg");
+}
+.header__social-contacts_item.telegram-header {
+  background-image: url(../../icons/social/telegram-header.svg);
+}
+.header__social-contacts_item.vkontakte-header {
+  background-image: url(../../icons/social/vk-header.svg);
+}
+.header__social-contacts_item.instagram-header {
+  background-image: url(../../icons/social/header-instagram.svg);
+}
+.header__user-block {
+  padding-left: 45px;
+  width: 204px;
+  height: 44px;
+  background-color: #f4f7fe;
+  color: #5f5cec;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: 10%;
+  background-repeat: no-repeat;
+  background-image: url(../../icons/signs/user-header.svg);
+}
+.header__user-block_link {
+  font-size: 15px;
+  color: #5f5cec;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.header__user-block_link:active,
+.header__user-block_link:visited {
+  color: #5f5cec;
+}
+
+/* select */
+
+.header__language_list {
+  font-size: 13px;
+  padding: 2px 23px 2px 2px;
+  border: none;
+  box-shadow: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url(../../icons/signs/chevron-down.svg);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0 top 50%, 0 0;
+  background-size: 1.2em auto, 100%;
+  cursor: pointer;
+}
+.header__language_list:active,
+.header__language_list:hover,
+.header__language_list:focus {
+  outline: 0;
+  outline-offset: 0;
+  border: none;
+  box-shadow: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.header__language_list::-ms-expand {
+  display: none;
+}
+.header__language_list:hover {
+  border-color: #5f5cec;
+}
+.header__language_list:focus {
+  border-color: #5f5cec;
+  box-shadow: 0 0 1px 3px #5f5cec;
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+.header__language_list option {
+  font-weight: normal;
+}
+*[dir="rtl"] .header__language_list,
+:root:lang(ar) .header__language_list,
+:root:lang(iw) .header__language_list {
+  background-position: left 0.7em top 50%, 0 0;
+  background-color: #fff;
+  padding: 0.6em 0.8em 0.5em 1.4em;
+}
+.ru-language {
+  padding-left: 30px;
+  background-image: url(../../icons/signs/flag.svg);
+  background-position: 3%;
+  background-repeat: no-repeat;
+}
+.mobile__header_user-block {
+  display: none;
+  width: 44px;
+  height: 44px;
+  background: #f4f7fe;
+  border-radius: 10px;
+  background-image: url(../../icons/signs/user-header.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+.header__hamburger {
+  width: 30px;
+  height: 30px;
+  background-image: url(../../icons/signs/hamburgerMenu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+}
+@media screen and (max-width: 1700px) {
+  .header__menu_item:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .header__menu {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .header__menu {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .header__hamburger {
+    display: block;
+  }
+  .header__menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header__social_wrapper {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile__header_user-block {
+    display: block;
+  }
+  .header__user-block {
+    display: none;
+  }
+  .header__social-contacts {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+}

@@ -7,12 +7,10 @@ const Lending = () => {
     const pageYOffset = window.pageYOffset;
     const header = document.querySelector("header");
     if (header && pageYOffset <= 10) {
-      header.style.opacity = "1";
-      header.style.position = "relative";
+      header.classList.remove("header-scroll");
     }
     if (header && pageYOffset > 10) {
-      header.style.opacity = "0.35";
-      header.style.position = "fixed";
+      header.classList.add("header-scroll");
     }
   });
 
