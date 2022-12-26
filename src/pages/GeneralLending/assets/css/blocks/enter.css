@@ -1,0 +1,70 @@
+.enter {
+  min-height: 750px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enter__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.enter__block {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.enter__form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.enter__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.enter-light-button {
+  width: 106px;
+  height: 54px;
+}
+.enter-button {
+  width: 217px;
+  height: 54px;
+}
+
+.enter-light-button-auth {
+  width: 157px;
+  height: 54px;
+}
+.enter-button-auth {
+  width: 106px;
+  height: 54px;
+}
+.enter__link {
+  color: #5f5cec;
+}
+.enter__link:visited,
+.enter__link:active {
+  color: #5f5cec;
+}
+
+@media screen and (max-width: 320px) {
+  .enter__buttons {
+    flex-direction: column;
+  }
+}

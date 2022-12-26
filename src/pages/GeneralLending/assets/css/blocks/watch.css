@@ -1,0 +1,243 @@
+.watch {
+  min-height: 1365px;
+  background-image: url("../../img/bg/4bg.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.container.watch-container {
+  padding: 0 224px 0 260px;
+}
+.watch__wrapper {
+  padding-top: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.watch__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.watch__header_span {
+  color: #5f5cec;
+}
+.watch__subscription-block_wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  margin: 85px 0 40px 0;
+}
+.block_item.subscription-block__item {
+  padding: 0;
+  text-align: center;
+  min-width: 312px;
+  min-height: 285px;
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.block_item.subscription-block__item:last-child {
+  min-width: 350px;
+}
+.subscription-block__item_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subscription-block__item-circle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: #f4f7fe;
+}
+.subscription-block__item-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 30px;
+  top: -25px;
+  background: #05cd99;
+  font-size: 21px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 25px;
+}
+.subscription-block__item-circle.reg {
+  background-image: url("../../icons/violet/reg.svg");
+}
+.subscription-block__item-circle.account {
+  background-image: url("../../icons/violet/account.svg");
+}
+.subscription-block__item-circle.robo {
+  background-image: url("../../icons/violet/robo.svg");
+}
+.subscription-block__item-circle.money {
+  background-image: url("../../icons/violet/income1.svg");
+}
+.watch_button {
+  width: 214px;
+  background-image: url("../../icons/signs/user.svg");
+}
+.watch__subscription-block_column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+}
+.block_image.watch-image {
+  width: 60%;
+}
+@media screen and (max-width: 1800px) {
+  .container.watch-container {
+    padding: 0 150px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .container.watch-container {
+    padding: 0 100px;
+  }
+  .watch__subscription-block_wrapper {
+    margin-top: 55px;
+  }
+  .watch__wrapper {
+    padding-top: 100px;
+  }
+  .watch__subscription-block_wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .block_item.subscription-block__item {
+    flex-direction: row;
+    width: 47%;
+    background-color: transparent;
+    min-height: 152px;
+    padding: 8px;
+    justify-content: flex-start;
+    text-align: left;
+    min-height: 145px;
+    align-items: flex-start;
+  }
+  .subscription-block__item_image {
+    align-self: flex-end;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .watch {
+    min-height: 1185px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .container.watch-container {
+    padding: 0 40px;
+  }
+  .watch__subscription-block_wrapper {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .watch {
+    padding: 0;
+    background-image: url(../../img/bg/Vector-4-tablet.svg);
+    min-height: 1100px;
+  }
+  .watch___item_description,
+  .watch___item_title {
+    text-align: start;
+  }
+  .watch__subscription-block_wrapper {
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .block_item.subscription-block__item {
+    max-width: 444px;
+  }
+  .block_image.watch-image {
+    width: 46%;
+  }
+}
+@media screen and (max-width: 990px) {
+  .watch__subscription-block_wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .block_item.subscription-block__item {
+    width: 80%;
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .watch__wrapper {
+    padding-top: 60px;
+  }
+  .watch__subscription-block_wrapper {
+    flex-direction: column;
+  }
+  .block_item.subscription-block__item {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .watch__subscription-block_column {
+    align-items: center;
+  }
+  .subscription-block__item_image {
+    align-self: center;
+  }
+  .watch___item_description,
+  .watch___item_title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container.watch-container {
+    padding: 0 20px;
+  }
+  .block_item.subscription-block__item:last-child {
+    min-width: 100%;
+  }
+  .block_image.watch-image {
+    width: 100%;
+  }
+  .block_item.subscription-block__item {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 390px) {
+  .watch {
+    background-position: bottom 160px left -40px;
+  }
+  .watch___item_description,
+  .watch___item_title {
+    text-align: center;
+    white-space: normal;
+  }
+  .block_item.subscription-block__item:last-child {
+    min-width: 100%;
+  }
+  .block_image.watch-image {
+    width: 100%;
+  }
+  .block_image.watch-image img {
+    width: 100%;
+    margin-top: 0;
+  }
+}

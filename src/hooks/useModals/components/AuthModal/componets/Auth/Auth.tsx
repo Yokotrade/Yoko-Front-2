@@ -55,7 +55,7 @@ const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
               alignItems="center"
             >
               <Styled.ActionsAuthBlock>
-                <Button
+                {/* <Button
                   sx={{ background: cyan[50], color: blue[700] }}
                   fullWidth
                   size="large"
@@ -64,10 +64,10 @@ const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
                   onClick={() => handleChangeAuthMode("register")}
                 >
                   {t("auth.register")}
-                </Button>
+                </Button> */}
 
                 <Box sx={{ width: "100%", position: "relative" }}>
-                  <Button
+                  {/* <Button
                     sx={{ background: cyan[50], color: blue[700] }}
                     fullWidth
                     size="large"
@@ -76,7 +76,7 @@ const Auth = ({ handleChangeAuthMode }: AuthComponentProps) => {
                     onClick={() => props.handleSubmit()}
                   >
                     {t("auth.authorization")}
-                  </Button>
+                  </Button> */}
                   {loading && (
                     <CircularProgress
                       size={24}

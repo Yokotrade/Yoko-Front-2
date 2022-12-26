@@ -49,7 +49,7 @@ const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
             />
             <Typography sx={{ color: deepPurple[100] }} variant="subtitle1">
               {t("register.have_login")}
-              <Button
+              {/* <Button
                 sx={{ color: deepPurple[50] }}
                 variant="text"
                 color="secondary"
@@ -57,9 +57,9 @@ const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
                 onClick={() => handleChangeAuthMode("auth")}
               >
                 {t("register.authorization")}
-              </Button>
+              </Button> */}
             </Typography>
-            <Button
+            {/* <Button
               sx={{ background: cyan[50], color: blue[700] }}
               fullWidth
               size="large"
@@ -68,7 +68,7 @@ const Register = ({ handleChangeAuthMode }: AuthComponentProps) => {
               onClick={() => props.handleSubmit()}
             >
               {t("register.register")}
-            </Button>
+            </Button> */}
           </Stack>
         )}
       </Formik>

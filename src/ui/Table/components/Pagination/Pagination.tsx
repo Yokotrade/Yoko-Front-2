@@ -53,12 +53,12 @@ const Pagination = (props: PaginationProps) => {
   };
   return (
     <Styled.PaginationWrapper>
-      <IconButton
+      {/* <IconButton
         onClick={() => handleClickPrevPage()}
         disabled={!isShowLeftAction}
       >
         <ArrowBackIosNewIcon />
-      </IconButton>
+      </IconButton> */}
       <Styled.PaginationActionsBlock>
         {pagesActions.map((el, index) => (
           <Styled.PaginationPageButton
@@ -70,12 +70,12 @@ const Pagination = (props: PaginationProps) => {
         ))}
       </Styled.PaginationActionsBlock>
 
-      <IconButton
+      {/* <IconButton
         onClick={() => handleClickNextPage()}
         disabled={!isShowRightAction}
       >
         <ArrowForwardIosIcon />
-      </IconButton>
+      </IconButton> */}
     </Styled.PaginationWrapper>
   );
 };

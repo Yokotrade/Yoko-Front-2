@@ -10,7 +10,7 @@ export const userSelectors = createSelector(
 
 export const isAuthUser = createSelector(
   userReducerSelectors,
-  (state) => !state.user?.ID
+  (state) => !!state.user?.ID
 );
 
 export const isLoading = createSelector(

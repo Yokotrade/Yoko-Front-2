@@ -27,21 +27,21 @@ const SideBar = () => {
   const location = useLocation();
   const path = location.pathname;
   const handleNavigate = (path: string) => navigate(path);
-  if (!open)
-    return (
-      <Styled.MenuButton onClick={() => setOpen(true)}>
-        <MenuIcon />
-      </Styled.MenuButton>
-    );
+  // if (!open)
+  //   return (
+  //     <Styled.MenuButton onClick={() => setOpen(true)}>
+  //       <MenuIcon />
+  //     </Styled.MenuButton>
+  //   );
   return (
     <Styled.SideBarWrapper isPosition={!isDesktop}>
       <Styled.SideBarActionsBlock>
         {!isDesktop && (
           <Styled.MenuSideBarHeaderBlock>
             <LogoWhiteIcon />
-            <Styled.MenuSideBarButton onClick={() => setOpen(false)}>
+            {/* <Styled.MenuSideBarButton onClick={() => setOpen(false)}>
               <CloseIcon />
-            </Styled.MenuSideBarButton>
+            </Styled.MenuSideBarButton> */}
           </Styled.MenuSideBarHeaderBlock>
         )}
         {!isDesktop && <UserInformation isSideBar />}
