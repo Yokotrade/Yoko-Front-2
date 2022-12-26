@@ -2,7 +2,15 @@ import WalletIcon from "@mui/icons-material/Wallet";
 import BotIcon from "icon/Bot";
 import { CardContentProps } from "components/CardContent";
 
-export const getGeneralCards = (balance: number): CardContentProps[] => {
+type GetGeneralCardsProps = {
+  balance: number;
+  handleOpenBotSettingsModal: () => void;
+};
+
+export const getGeneralCards = (
+  props: GetGeneralCardsProps
+): CardContentProps[] => {
+  const { balance, handleOpenBotSettingsModal } = props;
   return [
     {
       Icon: WalletIcon,
@@ -34,7 +42,7 @@ export const getGeneralCards = (balance: number): CardContentProps[] => {
         {
           title: "cardContent.tune",
           disable: false,
-          action: () => console.log("tune"),
+          action: () => handleOpenBotSettingsModal(),
         },
         {
           title: "cardContent.disable",

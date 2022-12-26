@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-export type ActionModalType = "auth";
+export type ActionModalType = "auth" | "botSettings";
 
 export interface InitialState {
   modalType: ActionModalType | null;

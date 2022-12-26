@@ -68,16 +68,17 @@ const CardContent = ({
       </Styled.CardInformationBlock>
       {actions?.length && (
         <Styled.PopupMenuWrapper>
-          {/* <IconButton
+          <IconButton
             aria-label="more"
             id="long-button"
             aria-controls={openMenu ? "long-menu" : undefined}
             aria-expanded={openMenu ? "true" : undefined}
             aria-haspopup="true"
             onClick={handleOpenMenu}
+            href=""
           >
             <MoreVertIcon />
-          </IconButton> */}
+          </IconButton>
           <Menu
             id="long-menu"
             MenuListProps={{
