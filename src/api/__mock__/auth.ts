@@ -1,8 +1,12 @@
 import { User, MockUser } from "./user";
 
-export interface AuthResponse extends User {}
+export interface AuthResponse {
+  data: User;
+}
 
-export const AuthResponseSuccess: AuthResponse = MockUser;
+export const AuthResponseSuccess: AuthResponse = {
+  data: MockUser,
+};
 
 export type AuthUserDto = {
   Login: string;

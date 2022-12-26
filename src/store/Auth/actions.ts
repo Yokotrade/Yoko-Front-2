@@ -8,24 +8,26 @@ import { AuthUserDto } from "api/__mock__/auth";
 import { AuthResponse } from "api/__mock__/auth";
 
 export const loginUser = createAsyncThunk<
-  AuthResponse | undefined,
+  AuthResponse["data"] | undefined,
   AuthUserDto,
   AsyncThunkConfig
 >("auth/loginUser", async (userData, { rejectWithValue }) => {
   try {
-    return await loginUserApi(userData);
+    const response = await loginUserApi(userData);
+    return response.data;
   } catch {
     return rejectWithValue("Не верный логин или пароль");
   }
 });
 
 export const registerUser = createAsyncThunk<
-  AuthResponse | undefined,
+  AuthResponse["data"] | undefined,
   AuthUserDto,
   AsyncThunkConfig
 >("auth/registerUser", async (userData, { rejectWithValue }) => {
   try {
-    return await registerUserApi(userData);
+    const response = await registerUserApi(userData);
+    return response.data;
   } catch {
     return rejectWithValue("Такой пользователь уже существует");
   }

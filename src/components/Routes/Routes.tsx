@@ -22,7 +22,7 @@ import * as Styled from "./Routing.styled";
 
 const Routing = (): JSX.Element => {
   const isAuth = useAppSelector(isAuthUser);
-
+  console.log(isAuth);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
