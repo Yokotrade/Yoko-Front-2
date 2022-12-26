@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import DialogContent from "@mui/material/DialogContent";
 import * as Styled from "./ModalPage.styled";
 
 export interface ModalPageProps {
@@ -10,7 +9,7 @@ export interface ModalPageProps {
 
 const ModalPage = ({ open, onClose, children }: ModalPageProps) => {
   return (
-    <Styled.ModalPageWrapper {...{ open, onClose }}>
+    <Styled.ModalPageWrapper maxWidth="xl" {...{ open, onClose }}>
       <Styled.ContentWrapper>{children}</Styled.ContentWrapper>
     </Styled.ModalPageWrapper>
   );

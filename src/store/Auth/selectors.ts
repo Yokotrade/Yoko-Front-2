@@ -10,10 +10,15 @@ export const userSelectors = createSelector(
 
 export const isAuthUser = createSelector(
   userReducerSelectors,
-  (state) => !state.user?.ID
+  (state) => !!state.user?.ID
 );
 
-export const isLoading = createSelector(
+export const isLoadingSelector = createSelector(
   userReducerSelectors,
   (state) => state.loading
+);
+
+export const errorSelector = createSelector(
+  userReducerSelectors,
+  (state) => state.error
 );

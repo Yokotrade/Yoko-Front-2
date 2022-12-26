@@ -1,0 +1,41 @@
+.block_item {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 20px rgba(20, 25, 143, 0.05);
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+.block_item_image {
+  height: 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.block_item_title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #181938;
+  width: 100%;
+}
+.block_item_description {
+  font-size: 16px;
+  color: #181938;
+  line-height: 25px;
+}
+@media screen and (max-width: 390px) {
+  .block_item_title {
+    text-align: center;
+  }
+  .block_item_description {
+    font-size: 15px;
+  }
+  /* .watch__subscription-block_wrapper {
+  } */
+  .block_item.subscription-block__item:last-child {
+    margin-bottom: 0;
+  }
+}

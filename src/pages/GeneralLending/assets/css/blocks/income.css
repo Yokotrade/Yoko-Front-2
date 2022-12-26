@@ -1,0 +1,292 @@
+.income {
+  min-height: 1415px;
+  background-image: url("../../img/bg/2bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+.income__wrapper {
+  padding-top: 100px;
+  max-height: 810px;
+}
+.income__header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.income_subtitle {
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+.income__info-block {
+  margin-bottom: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.income__info-block_image.block_item_image {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.income__info-block_item {
+  padding: 30px 30px 24px 30px;
+  width: 312px;
+  min-height: 404px;
+  max-height: 440px;
+}
+
+.income__info-block_image {
+  background: #f4f7fe;
+  border-radius: 100%;
+  margin-bottom: 15px;
+}
+
+.block_item_image.income__info-block_image img {
+  width: 60%;
+}
+.income__info-block_item {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.income_button {
+  margin-bottom: 55px;
+  margin: 0 auto;
+  width: 282px;
+  background-image: url("../../icons/signs/Dollar.svg");
+}
+.income__exchange-block {
+  padding-top: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 605px;
+}
+.income__exchange-block_description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  align-self: center;
+}
+.income__info-block_item-tablet {
+  display: none;
+}
+
+@media screen and (max-width: 1700px) {
+  .income__info-block {
+    gap: 20px;
+  }
+  .income__info-block_item {
+    min-height: 460px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .income__info-block {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .income__info-block_item {
+    width: 48%;
+    gap: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .income__info-block_image.block_item_image {
+    align-self: center;
+  }
+
+  .income__info-block_item-description {
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  .income__info-block_item:nth-child(1),
+  .income__info-block_item:nth-child(2) {
+    min-height: 160px;
+  }
+  .income__info-block_item:nth-child(3),
+  .income__info-block_item:nth-child(4) {
+    min-height: 210px;
+    max-height: 210px;
+  }
+  .income__info-block_item:nth-child(4) {
+    padding: 30px 17px 24px 30px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .income__wrapper {
+    padding-top: 94px;
+  }
+  .income__info-block_item:nth-child(3),
+  .income__info-block_item:nth-child(4) {
+    min-height: 230px;
+    max-height: 230px;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .income {
+    min-height: 1321px;
+  }
+  .tablet-screen.income-tablet {
+    display: block;
+  }
+  .full-screen.income-full-screen {
+    display: none;
+  }
+  .income__exchange-block {
+    padding-top: 0;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .income__info-block_item:nth-child(3),
+  .income__info-block_item:nth-child(4) {
+    min-height: 250px;
+    max-height: 250px;
+  }
+  .income__info-block_item:nth-child(1),
+  .income__info-block_item:nth-child(2) {
+    min-height: 180px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .income {
+    background-image: url("../../img/bg/Vector-2-tablet.svg");
+  }
+  .income__info-block_item {
+    align-items: center;
+  }
+
+  .exchange-block_header {
+    margin-top: 123px;
+  }
+  .income__exchange-block_image {
+    margin-bottom: 34px;
+  }
+  .income__exchange-block {
+    padding-top: 0;
+    min-height: 573px;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .income__info-block_item:nth-child(1),
+  .income__info-block_item:nth-child(2),
+  .income__info-block_item:nth-child(3),
+  .income__info-block_item:nth-child(4) {
+    width: 80%;
+    min-height: 170px;
+    max-height: 170px;
+  }
+  .income__info-block_item:nth-child(4) {
+    max-height: 228px;
+  }
+  .income__wrapper {
+    max-height: fit-content;
+  }
+  .income__info-block_item-description {
+    width: 100%;
+  }
+  .income__exchange-block_image {
+    margin-top: 66px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .income__exchange-block {
+    padding-top: 0;
+    flex-direction: column;
+  }
+  .exchange-block_header {
+    text-align: center;
+  }
+  .income__exchange-block_description {
+    align-items: center;
+    justify-content: center;
+  }
+  .tablet-screen.income-tablet {
+    width: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .income__info-block_item.block_item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .income {
+    min-height: 1300px;
+  }
+  .income__wrapper {
+    padding-top: 60px;
+    max-height: fit-content;
+  }
+
+  .section-header.exchange-block_header {
+    margin-top: 60px;
+  }
+  .exchange-block_subheader {
+    width: 100%;
+  }
+  .income__info-block_item.block_item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-height: auto;
+    max-height: fit-content;
+  }
+  .income__exchange-block_image {
+    margin-top: 66px;
+    margin-bottom: 0;
+  }
+  .income__info-block_item.block_item {
+    padding: 15px;
+    gap: 0;
+  }
+  .income__info-block_image.block_item_image {
+    align-self: flex-start;
+  }
+  .tablet-screen.income-tablet {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .income {
+    min-height: 1949px;
+    background-position: bottom 140px left 0;
+  }
+  .income__exchange-block {
+    min-height: 537px;
+  }
+  .income__info-block_item-description {
+    width: 100%;
+  }
+  .tablet-screen {
+    width: 100%;
+  }
+  .income__wrapper {
+    padding-top: 60px;
+    max-height: fit-content;
+  }
+  .income__info-block_title.block_item_title {
+    text-align: left;
+  }
+
+  .income__info-block_item-description {
+    gap: 0;
+  }
+}
