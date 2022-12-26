@@ -12,7 +12,8 @@
     "forgot": "Forgot your password?",
     "register": "Register",
     "authorization": "Authorization",
-    "password_input_placeholder": "password"
+    "password_input_placeholder": "password",
+    "error": "Invalid username or password"
   },
   "register": {
     "title": "Register",
@@ -20,7 +21,8 @@
     "register": "Register",
     "authorization": "Authorization",
     "password_input_placeholder": "password",
-    "password_retry_input_placeholder": "repeat the password"
+    "password_retry_input_placeholder": "repeat the password",
+    "error": "Such a user already exists"
   },
   "dictionary": {
     "cryptocurrency_trading_robot": "Cryptocurrency trading robot",

@@ -12,7 +12,8 @@
     "forgot": "Забыли пароль?",
     "register": "Зарегистрироваться",
     "authorization": "Авторизация",
-    "password_input_placeholder": "пароль"
+    "password_input_placeholder": "пароль",
+    "error": "Не верный логин или пароль"
   },
   "register": {
     "title": "Регистрация",
@@ -20,7 +21,8 @@
     "register": "Зарегистрироваться",
     "authorization": "Авторизоваться",
     "password_input_placeholder": "пароль",
-    "password_retry_input_placeholder": "повторите пароль"
+    "password_retry_input_placeholder": "повторите пароль",
+    "error": "Такой пользователь уже существует"
   },
   "dictionary": {
     "cryptocurrency_trading_robot": "Робот для торговли криптовалютами",

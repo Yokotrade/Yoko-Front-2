@@ -1,16 +1,16 @@
 import * as Yup from "yup";
 
 export interface AuthInitialValues {
-  email: string;
-  password: string;
+  Login: string;
+  Password: string;
 }
 
 export const initialValues: AuthInitialValues = {
-  email: "",
-  password: "",
+  Login: "",
+  Password: "",
 };
 
 export const validationSchema = Yup.object().shape({
-  email: Yup.string().required(),
-  password: Yup.string().required(),
+  Login: Yup.string().required(),
+  Password: Yup.string().required(),
 });

@@ -4,14 +4,23 @@ interface InputFieldProps {
   placeholder: string;
   handleChange: (evt: React.ChangeEvent<any>) => void;
   name: string;
+  error?: string;
 }
 
-const InputField = ({ placeholder, handleChange, name }: InputFieldProps) => {
+const InputField = ({
+  placeholder,
+  handleChange,
+  name,
+  error,
+}: InputFieldProps) => {
   return (
-    <Styled.InputField
-      onChange={(evt) => handleChange(evt)}
-      {...{ placeholder, name }}
-    />
+    <>
+      <Styled.InputField
+        onChange={(evt) => handleChange(evt)}
+        {...{ placeholder, name }}
+      />
+      {error && <Styled.InputErrorBlock>{error}</Styled.InputErrorBlock>}
+    </>
   );
 };
 

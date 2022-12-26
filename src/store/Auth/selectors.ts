@@ -13,7 +13,12 @@ export const isAuthUser = createSelector(
   (state) => !!state.user?.ID
 );
 
-export const isLoading = createSelector(
+export const isLoadingSelector = createSelector(
   userReducerSelectors,
   (state) => state.loading
+);
+
+export const errorSelector = createSelector(
+  userReducerSelectors,
+  (state) => state.error
 );

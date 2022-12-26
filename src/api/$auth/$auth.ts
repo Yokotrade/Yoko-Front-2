@@ -6,14 +6,14 @@ import {
   AuthResponseSuccess,
 } from "api/__mock__/auth";
 
-export const loginUser = ({ email, password }: AuthUserDto) => {
+export const loginUser = (body: AuthUserDto) => {
   if (withMock)
     return withMockReturnValue<AuthResponse>(AuthResponseSuccess, 3000);
-  return axios.post<AuthResponse, null>(`auth/${email}/${password}`, null);
+  return axios.post<AuthResponse, AuthUserDto>("frontauth", body);
 };
 
-export const registerUser = ({ email, password }: AuthUserDto) => {
+export const registerUser = (body: AuthUserDto) => {
   if (withMock)
     return withMockReturnValue<AuthResponse>(AuthResponseSuccess, 3000);
-  return axios.post<AuthResponse, null>(`register/${email}/${password}`, null);
+  return axios.post<AuthResponse, AuthUserDto>("register", body);
 };
