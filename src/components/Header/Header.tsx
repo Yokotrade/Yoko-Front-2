@@ -68,12 +68,12 @@ const Header = (): JSX.Element => {
         </Styled.SocialWrapper>
         {!isAuth && (
           <>
-            {/* <Styled.UserRegistrationBtn
-              startIcon={<UserIcon />}
-              onClick={handleOpenAuthModal}
-            >
-              {t("header.register")}
-            </Styled.UserRegistrationBtn> */}
+            <Styled.UserRegistrationBtn onClick={handleOpenAuthModal}>
+              <>
+                <UserIcon />
+                {t("header.register")}
+              </>
+            </Styled.UserRegistrationBtn>
             <Styled.UserRegistrationIconButton onClick={handleOpenAuthModal}>
               <UserIcon />
             </Styled.UserRegistrationIconButton>
@@ -97,16 +97,9 @@ const Header = (): JSX.Element => {
           ))}
         </Styled.LanguagesWrapper>
         <Styled.HeaderMenuBlock>
-          {/* <IconButton
-            aria-label="more"
-            id="long-button"
-            aria-controls={openMenu ? "long-menu" : undefined}
-            aria-expanded={openMenu ? "true" : undefined}
-            aria-haspopup="true"
-            onClick={handleOpenMenu}
-          >
+          <Styled.MenuIconButton onClick={handleOpenMenu}>
             <MenuIcon sx={{ color: "#5F5CEC" }} />
-          </IconButton> */}
+          </Styled.MenuIconButton>
           <Drawer
             anchor="right"
             open={openMenu}

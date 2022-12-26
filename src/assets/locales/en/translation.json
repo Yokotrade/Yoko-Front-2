@@ -39,7 +39,7 @@
     "create_passive_income": "Generate passive income",
     "we_work_largest_exchanges": "We work with the largest exchanges",
     "we_want_you_earn": "We want you to make money",
-    "we_connect_robot_absolutely_charge._subscription_fees": "We connect the robot absolutely free of charge. No subscription fee. We only take % of your profits earned while trading with our Yoko robot. When you first connect, the profit percentage will be calculated after the trial period, so you have 14 days to test the Yoko robot completely free of charge. Then, you will only need to pay a percentage of the profit. Our profit depends on yours.",
+    "we_connect_robot_absolutely_charge_subscription_fees": "We connect the robot absolutely free of charge. No subscription fee. We only take % of your profits earned while trading with our Yoko robot. When you first connect, the profit percentage will be calculated after the trial period, so you have 14 days to test the Yoko robot completely free of charge. Then, you will only need to pay a percentage of the profit. Our profit depends on yours.",
     "percentage_profit_calculated_size_deposit_trading_period": "the percentage of profit is calculated based on the amount of your deposit and the trading period, more details can be found in your account.",
     "connect_robot": "Connect the robot",
     "last_closed_deals_Yoko_robot": "Latest closed deals",
@@ -63,10 +63,12 @@
     "your_goal_profit_will_help_this": "Your goal is profit, and we will help you with this",
     "smart_trading_algorithm": "Smart trading algorithm",
     "combined_trading_strategies_trading_combined_together_efficiency_strategy": "We have combined two of the best trading strategies in one. Smart averaging trading combined with the best pump analysis on the market. All stated above allows you to trade with maximum efficiency. Learn more about the strategy.",
+    "learn_more_strategy": "Learn more about the strategy",
     "unlimited_list_coins": "Unlimited list of coins",
     "robot_simultaneously_unlimited_automatically_trading_pairs": "The robot can trade simultaneously with an unlimited number of coins and automatically switch between trading pairs.",
     "large_selection_settings": "Large selection of settings",
     "capabilities_control_panel_trading_settings_effectively_individually_robot_improve_trading": "We’ve increased your capabilities and added more than 30 trading settings to the robot control panel, which allows you to trade effectively regardless of market behaviour. We also added ready-made ranges of settings that match your deposit amount. Customize your Yoko robot and improve your trading.",
+    "soon": "Soon",
     "telegram_bot": "Telegram bot",
     "connect_telegram_account_notify_transactions": "Connect the telegram bot to your account and it will notify you every time about new deals.",
     "simulation_mode": "Simulation mode",
@@ -80,7 +82,8 @@
     "example_riviews": "Suddenly, the conclusions made on the basis of Internet analytics to this day remain the lot of liberals who are eager to be declared violating the universal norms of ethics and morality. Modern technologies have reached such a level that understanding the essence of resource-saving technologies creates the need to include a number of extraordinary events in the production plan.",
     "follow_our_blog": "Follow our blog",
     "best_cryptocurrency_trading": "The Best Cryptocurrency Trading Bots in 2022",
-    "cryptocurrency_changing_market _change_ratings_changes _version_article": "Cryptocurrency is a rapidly changing market, so information about trading bots changes frequently. Prices change, features are added, and ratings change. We've made three major changes to this version of our article:"
+    "cryptocurrency_changing_market_change_ratings_changes_version_article": "Cryptocurrency is a rapidly changing market, so information about trading bots changes frequently. Prices change, features are added, and ratings change. We've made three major changes to this version of our article:",
+    "more_detailed": "More detailed"
   },
   "footer": {
     "terms_of_use": "Terms of use",
